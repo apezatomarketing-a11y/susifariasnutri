@@ -73,7 +73,7 @@ export default function AboutMe() {
       <section className="py-20">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Galeria de Momentos</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Galeria de Conquistas</h2>
             <p className="text-lg text-muted-foreground">Confira alguns momentos especiais da minha trajetória</p>
           </div>
           <Gallery />
