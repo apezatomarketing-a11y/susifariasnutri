@@ -64,7 +64,7 @@ export default function Services() {
       {/* Services Grid */}
       <section className="py-24 md:py-32 bg-background">
         <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {SERVICES.map((service) => (
               <div
                 key={service.id}

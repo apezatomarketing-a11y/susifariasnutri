@@ -76,11 +76,11 @@ Este site pode conter links para serviços de terceiros que usam seus próprios 
         {/* Background Decorative Elements */}
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-primary opacity-30" />
         
-        <div className="container py-16 relative z-10">
+        <div className="container py-16 px-6 relative z-10">
           {/* Main Footer Content */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 text-center md:text-left">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 text-center lg:text-left">
             {/* Brand */}
-            <div className="flex flex-col items-center md:items-start group">
+            <div className="flex flex-col items-center lg:items-start group">
               <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 cursor-pointer">
                 <span className="text-white font-bold text-2xl">SF</span>
               </div>
@@ -96,7 +96,7 @@ Este site pode conter links para serviços de terceiros que usam seus próprios 
                   <button
                     key={link.label}
                     onClick={() => handleNavigation(link.href)}
-                    className="block text-sm text-muted-foreground hover:text-primary hover:pl-2 transition-all duration-300 font-medium"
+                    className="block w-full lg:w-auto text-sm text-muted-foreground hover:text-primary hover:pl-2 transition-all duration-300 font-medium"
                   >
                     {link.label}
                   </button>
@@ -107,7 +107,7 @@ Este site pode conter links para serviços de terceiros que usam seus próprios 
             {/* Social Media */}
             <div>
               <h4 className="font-bold text-foreground mb-6 uppercase tracking-wider text-xs">Conecte-se</h4>
-              <div className="flex flex-wrap justify-center md:justify-start gap-4">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4">
                 {[
                   { icon: Instagram, url: SOCIAL_MEDIA.instagram, label: 'Instagram' },
                   { icon: Facebook, url: SOCIAL_MEDIA.facebook, label: 'Facebook' },
@@ -147,7 +147,7 @@ Este site pode conter links para serviços de terceiros que usam seus próprios 
 
           {/* Policies */}
           <div className="border-t border-border/50 pt-10 mb-10">
-            <div className="flex flex-wrap justify-center gap-8 text-xs font-bold uppercase tracking-widest">
+            <div className="flex flex-wrap justify-center gap-6 sm:gap-8 text-[10px] sm:text-xs font-bold uppercase tracking-widest">
               {POLICY_LINKS.map((link) => (
                 <button
                   key={link.label}
@@ -161,7 +161,7 @@ Este site pode conter links para serviços de terceiros que usam seus próprios 
           </div>
 
           {/* Copyright */}
-          <div className="text-center text-xs text-muted-foreground/60 font-medium">
+          <div className="text-center text-[10px] sm:text-xs text-muted-foreground/60 font-medium px-4">
             <p className="mb-3">
               © {COMPANY_INFO.year} {COMPANY_INFO.name}. Todos os direitos reservados.
             </p>
@@ -182,9 +182,9 @@ Este site pode conter links para serviços de terceiros que usam seus próprios 
 
       {/* Policy Dialogs */}
       <Dialog open={openPolicy !== null} onOpenChange={(open) => !open && setOpenPolicy(null)}>
-        <DialogContent className="max-h-[80vh] overflow-y-auto glass-effect border-primary/20">
+        <DialogContent className="max-w-[90vw] sm:max-w-lg max-h-[80vh] overflow-y-auto glass-effect border-primary/20 rounded-3xl">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-bold text-primary">
+            <DialogTitle className="text-xl sm:text-2xl font-bold text-primary">
               {openPolicy === 'política' ? 'Política de Privacidade' : openPolicy === 'termos' ? 'Termos de Uso' : 'Política de Cookies'}
             </DialogTitle>
           </DialogHeader>

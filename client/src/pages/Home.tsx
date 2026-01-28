@@ -111,7 +111,7 @@ export default function Home() {
             {/* Video Container */}
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-[3rem] opacity-20 blur-2xl" />
-              <div className="relative aspect-video rounded-[3rem] overflow-hidden border-8 border-card shadow-2xl bg-black">
+              <div className="relative aspect-[9/16] max-w-[400px] mx-auto rounded-[3rem] overflow-hidden border-8 border-card shadow-2xl bg-black">
                 <video
                   controls
                   className="w-full h-full object-contain"
@@ -160,13 +160,13 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {[
               { title: 'Clínica', desc: 'Tratamento de patologias e reeducação alimentar.', icon: '🏥' },
               { title: 'Esportiva', desc: 'Performance, hipertrofia e emagrecimento.', icon: '⚡' },
               { title: 'Mounjaro', desc: 'Acompanhamento especializado em protocolos injetáveis.', icon: '💉' },
             ].map((s, i) => (
-              <div key={i} className="p-10 md:p-12 bg-card border border-border rounded-[3rem] hover-glow group shadow-sm">
+              <div key={i} className="p-8 sm:p-10 md:p-12 bg-card border border-border rounded-[2.5rem] sm:rounded-[3rem] hover-glow group shadow-sm">
                 <div className="text-6xl mb-8 group-hover:scale-110 transition-transform inline-block">{s.icon}</div>
                 <h3 className="text-3xl font-black mb-4">{s.title}</h3>
                 <p className="text-muted-foreground font-medium leading-relaxed text-lg">{s.desc}</p>
