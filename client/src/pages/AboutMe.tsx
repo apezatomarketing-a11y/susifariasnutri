@@ -34,7 +34,9 @@ export default function AboutMe() {
               </div>
               
               <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-tight">
-                Susi <span className="text-primary">Farias</span>
+                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-text">
+                  Susi Farias
+                </span>
               </h1>
               
               <div className="space-y-6 text-base md:text-lg text-muted-foreground font-medium leading-relaxed">

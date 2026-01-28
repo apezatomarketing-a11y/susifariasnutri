@@ -45,7 +45,9 @@ export default function Contact() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(var(--primary),0.1),transparent_70%)]" />
         <div className="container relative z-10 text-center space-y-8 px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
           <h1 className="text-6xl md:text-8xl xl:text-9xl font-black tracking-tighter leading-none">
-            Con<span className="text-primary">tato</span>
+            <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-text">
+              Contato
+            </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-medium leading-relaxed">
             Estou pronta para te ouvir. Escolha o canal que preferir e vamos iniciar sua jornada hoje mesmo.

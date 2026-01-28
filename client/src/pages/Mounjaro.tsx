@@ -30,7 +30,9 @@ export default function Mounjaro() {
             <span className="text-sm font-bold text-primary uppercase tracking-widest">Inovação Médica</span>
           </div>
           <h1 className="text-6xl md:text-8xl xl:text-9xl font-black tracking-tighter leading-none">
-            Moun<span className="text-primary">jaro</span>
+            <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-text">
+              Mounjaro
+            </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-medium leading-relaxed">
             O tratamento revolucionário que está transformando o controle de peso e saúde metabólica com tecnologia de ponta.
