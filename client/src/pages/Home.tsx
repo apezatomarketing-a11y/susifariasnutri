@@ -116,7 +116,7 @@ export default function Home() {
             <div className="relative aspect-video rounded-[3rem] overflow-hidden border-8 border-card shadow-2xl bg-black">
               <video
                 controls
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
                 poster={FEATURED_IMAGES.home}
               >
                 <source src="https://evaoqyroqmmlojtzrulj.supabase.co/storage/v1/object/public/videos/video%20inicio.mp4" type="video/mp4" />

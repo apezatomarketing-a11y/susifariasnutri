@@ -45,10 +45,10 @@ export default function Mounjaro() {
             {/* Video Container */}
             <div className="relative group order-2 lg:order-1">
               <div className="absolute inset-0 bg-primary/20 rounded-[4rem] rotate-3 group-hover:rotate-6 transition-transform duration-500 blur-2xl" />
-              <div className="relative aspect-video rounded-[3rem] overflow-hidden border-8 border-card shadow-2xl bg-black">
+              <div className="relative aspect-[9/16] max-w-[400px] mx-auto rounded-[3rem] overflow-hidden border-8 border-card shadow-2xl bg-black">
                 <video
                   controls
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   poster={FEATURED_IMAGES.home}
                 >
                   <source src="/assets/videos/mounjaro_local.mp4" type="video/mp4" />
