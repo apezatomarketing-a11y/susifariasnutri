@@ -1,7 +1,7 @@
 import { GOOGLE_MAPS, FEATURED_IMAGES, CONTACT_INFO, WHATSAPP_MESSAGES, VIDEOS } from '@/lib/constants';
 import FloatingButtons from '@/components/FloatingButtons';
 import Footer from '@/components/Footer';
-import { MapPin, MessageCircle, Star, Users, Award, CheckCircle2, Play } from 'lucide-react';
+import { MapPin, MessageCircle, Star, Users, Award, CheckCircle2 } from 'lucide-react';
 
 export default function Home() {
   const handleWhatsApp = (message: string) => {
@@ -12,13 +12,13 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background selection:bg-primary/30">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden py-24 md:py-32">
         {/* Background Elements */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(var(--primary),0.05),transparent_70%)]" />
         <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-primary/10 rounded-full blur-[120px] animate-pulse-slow" />
         <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-secondary/10 rounded-full blur-[120px] animate-pulse-slow" />
 
-        <div className="container relative z-10 py-12 md:py-0 px-6 md:px-8 lg:px-12">
+        <div className="container relative z-10 px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-7xl mx-auto">
             {/* Text Content */}
             <div className="space-y-8 text-center lg:text-left order-2 lg:order-1">
@@ -63,38 +63,18 @@ export default function Home() {
                   Ver Serviços
                 </a>
               </div>
-              
-              <div className="flex items-center justify-center lg:justify-start gap-6 pt-4 animate-in fade-in duration-1000 delay-700">
-                <div className="flex -space-x-3">
-                  {[1,2,3,4].map(i => (
-                    <div key={i} className="w-10 h-10 rounded-full border-2 border-background bg-muted flex items-center justify-center text-[10px] font-bold">
-                      {i}+
-                    </div>
-                  ))}
-                </div>
-                <p className="text-sm font-medium text-muted-foreground">
-                  <span className="text-foreground font-bold">500+</span> vidas transformadas
-                </p>
-              </div>
             </div>
 
-            {/* Video/Image Container */}
+            {/* Featured Image Container */}
             <div className="relative order-1 lg:order-2 group animate-in fade-in zoom-in duration-1000">
               <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-[2rem] rotate-3 opacity-20 group-hover:rotate-6 transition-transform duration-500" />
-              <div className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-[2rem] overflow-hidden border-4 border-card shadow-2xl bg-black">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
+              <div className="relative aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-[2rem] overflow-hidden border-4 border-card shadow-2xl bg-muted">
+                <img
+                  src="/assets/images/foto inicio.jpeg"
+                  alt="Susi Farias"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  poster={FEATURED_IMAGES.home}
-                >
-                  <source src={VIDEOS.home} type="video/mp4" />
-                  <source src={VIDEOS.home} type="video/quicktime" />
-                  <img src={FEATURED_IMAGES.home} alt="Susi Farias" className="w-full h-full object-cover" />
-                </video>
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-60" />
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
                 
                 {/* Floating Info Card */}
                 <div className="absolute bottom-6 left-6 right-6 p-6 glass-effect rounded-2xl translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
@@ -114,33 +94,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Banner Section - Acima do Vídeo */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/5">
+      {/* Banner Section - Com Destaque de Título Principal */}
+      <section className="py-24 md:py-32 bg-gradient-to-br from-primary/10 via-secondary/5 to-primary/10 border-y border-primary/10">
         <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-          <div className="text-center space-y-6 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-tight">
+          <div className="text-center space-y-8 max-w-5xl mx-auto">
+            <h2 className="text-4xl md:text-6xl xl:text-7xl font-black tracking-tighter leading-tight animate-in fade-in slide-in-from-bottom-10 duration-1000">
               Cuidar da sua saúde é um compromisso com a sua melhor versão.
             </h2>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
               Cada corpo tem uma história, cada pessoa tem uma rotina, e é por isso que o meu trabalho é totalmente personalizado. Unindo ciência, experiência clínica e um olhar humano, desenvolvo estratégias nutricionais que promovem equilíbrio, desempenho, bem-estar e resultados que você consegue manter ao longo da vida.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Video Section - Abaixo do Banner */}
-      <section className="py-16 md:py-24">
+      {/* Video Section - Único na página */}
+      <section className="py-24 md:py-32 bg-background">
         <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
           <div className="relative group max-w-5xl mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-[2rem] opacity-20 blur-xl" />
-            <div className="relative aspect-video rounded-[2rem] overflow-hidden border-4 border-card shadow-2xl bg-black">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-[3rem] opacity-20 blur-3xl" />
+            <div className="relative aspect-video rounded-[3rem] overflow-hidden border-8 border-card shadow-2xl bg-black">
               <video
                 controls
                 className="w-full h-full object-cover"
                 poster={FEATURED_IMAGES.home}
               >
-                <source src={VIDEOS.home} type="video/mp4" />
-                <source src={VIDEOS.home} type="video/quicktime" />
+                <source src="https://evaoqyroqmmlojtzrulj.supabase.co/storage/v1/object/public/videos/video%20inicio.mp4" type="video/mp4" />
                 Seu navegador não suporta a reprodução de vídeos.
               </video>
             </div>
@@ -149,7 +128,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 md:py-24 relative overflow-hidden">
+      <section className="py-24 md:py-32 relative overflow-hidden bg-muted/20">
         <div className="container relative z-10 px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
@@ -158,9 +137,9 @@ export default function Home() {
               { label: 'Satisfação', val: '98%', icon: Star, color: 'text-primary' },
               { label: 'Protocolos', val: '15+', icon: CheckCircle2, color: 'text-secondary' },
             ].map((stat, i) => (
-              <div key={i} className="group p-6 md:p-8 bg-card border border-border rounded-3xl hover-lift text-center">
-                <stat.icon className={`${stat.color} mx-auto mb-4 group-hover:scale-110 transition-transform`} size={32} />
-                <div className="text-3xl md:text-4xl font-black mb-1">{stat.val}</div>
+              <div key={i} className="group p-8 md:p-10 bg-card border border-border rounded-[2.5rem] hover-lift text-center shadow-sm">
+                <stat.icon className={`${stat.color} mx-auto mb-4 group-hover:scale-110 transition-transform`} size={40} />
+                <div className="text-4xl md:text-5xl font-black mb-1">{stat.val}</div>
                 <p className="text-sm font-bold text-muted-foreground uppercase tracking-tighter">{stat.label}</p>
               </div>
             ))}
@@ -169,29 +148,29 @@ export default function Home() {
       </section>
 
       {/* Quick Services */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-24 md:py-32 bg-background">
         <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-20">
             <div className="max-w-2xl">
               <h2 className="text-4xl md:text-6xl font-black mb-4 tracking-tighter">Especialidades</h2>
-              <p className="text-lg text-muted-foreground font-medium">Protocolos exclusivos desenvolvidos para cada fase da sua jornada.</p>
+              <p className="text-xl text-muted-foreground font-medium">Protocolos exclusivos desenvolvidos para cada fase da sua jornada.</p>
             </div>
-            <a href="/services" className="text-primary font-bold flex items-center gap-2 group">
+            <a href="/services" className="text-primary font-bold flex items-center gap-2 group text-lg">
               Ver todos os serviços
               <span className="w-8 h-[2px] bg-primary group-hover:w-12 transition-all" />
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
             {[
               { title: 'Clínica', desc: 'Tratamento de patologias e reeducação alimentar.', icon: '🏥' },
               { title: 'Esportiva', desc: 'Performance, hipertrofia e emagrecimento.', icon: '⚡' },
               { title: 'Mounjaro', desc: 'Acompanhamento especializado em protocolos injetáveis.', icon: '💉' },
             ].map((s, i) => (
-              <div key={i} className="p-8 md:p-10 bg-card border border-border rounded-[2.5rem] hover-glow group">
-                <div className="text-5xl mb-8 group-hover:scale-110 transition-transform inline-block">{s.icon}</div>
-                <h3 className="text-2xl font-black mb-4">{s.title}</h3>
-                <p className="text-muted-foreground font-medium leading-relaxed">{s.desc}</p>
+              <div key={i} className="p-10 md:p-12 bg-card border border-border rounded-[3rem] hover-glow group shadow-sm">
+                <div className="text-6xl mb-8 group-hover:scale-110 transition-transform inline-block">{s.icon}</div>
+                <h3 className="text-3xl font-black mb-4">{s.title}</h3>
+                <p className="text-muted-foreground font-medium leading-relaxed text-lg">{s.desc}</p>
               </div>
             ))}
           </div>
@@ -199,30 +178,30 @@ export default function Home() {
       </section>
 
       {/* Location */}
-      <section className="py-16 md:py-24">
+      <section className="py-24 md:py-32 bg-muted/10">
         <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <div className="space-y-10">
               <h2 className="text-4xl md:text-6xl font-black tracking-tighter">Onde Estamos</h2>
-              <div className="space-y-6">
-                <div className="flex gap-4">
-                  <div className="p-4 bg-primary/10 rounded-2xl h-fit">
-                    <MapPin className="text-primary" size={24} />
+              <div className="space-y-8">
+                <div className="flex gap-6">
+                  <div className="p-5 bg-primary/10 rounded-2xl h-fit">
+                    <MapPin className="text-primary" size={32} />
                   </div>
                   <div>
-                    <p className="font-bold text-xl mb-1">Consultório SJC</p>
-                    <p className="text-muted-foreground font-medium">{CONTACT_INFO.address}</p>
+                    <p className="font-bold text-2xl mb-2">Consultório SJC</p>
+                    <p className="text-xl text-muted-foreground font-medium leading-relaxed">{CONTACT_INFO.address}</p>
                   </div>
                 </div>
                 <button
                   onClick={() => window.open(GOOGLE_MAPS.mapsLink, '_blank')}
-                  className="w-full md:w-auto px-8 py-4 bg-primary text-white rounded-2xl font-bold hover:scale-105 transition-all shadow-lg shadow-primary/20"
+                  className="w-full md:w-auto px-10 py-5 bg-primary text-white rounded-2xl font-bold text-lg hover:scale-105 transition-all shadow-xl shadow-primary/20"
                 >
                   Traçar Rota no Maps
                 </button>
               </div>
             </div>
-            <div className="h-[450px] rounded-[3rem] overflow-hidden border-8 border-card shadow-2xl relative group">
+            <div className="h-[500px] rounded-[4rem] overflow-hidden border-8 border-card shadow-2xl relative group">
               <iframe
                 src={GOOGLE_MAPS.embedUrl}
                 width="100%"
@@ -238,15 +217,15 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-24 container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-        <div className="relative p-12 md:p-24 bg-primary rounded-[4rem] overflow-hidden text-center text-white">
+      <section className="py-24 md:py-32 container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+        <div className="relative p-16 md:p-32 bg-primary rounded-[5rem] overflow-hidden text-center text-white shadow-2xl">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.1),transparent)]" />
-          <div className="relative z-10 space-y-8 max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-7xl font-black tracking-tighter">Vamos começar sua transformação?</h2>
-            <p className="text-lg md:text-xl text-primary-foreground/80 font-medium">Agende sua avaliação e dê o primeiro passo para uma vida mais saudável.</p>
+          <div className="relative z-10 space-y-10 max-w-4xl mx-auto">
+            <h2 className="text-5xl md:text-8xl font-black tracking-tighter leading-none">Vamos começar sua transformação?</h2>
+            <p className="text-xl md:text-2xl text-primary-foreground/80 font-medium">Agende sua avaliação e dê o primeiro passo para uma vida mais saudável.</p>
             <button
               onClick={() => handleWhatsApp(WHATSAPP_MESSAGES.floatingButton)}
-              className="px-12 py-6 bg-white text-primary rounded-2xl font-black text-xl hover:scale-110 transition-all shadow-2xl active:scale-95"
+              className="px-16 py-8 bg-white text-primary rounded-3xl font-black text-2xl hover:scale-110 transition-all shadow-2xl active:scale-95"
             >
               Agendar via WhatsApp
             </button>

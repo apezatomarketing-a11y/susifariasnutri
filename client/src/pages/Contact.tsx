@@ -39,40 +39,40 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background selection:bg-primary/30">
       {/* Hero Section */}
-      <section className="relative min-h-[40vh] flex items-center justify-center overflow-hidden py-20">
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden py-24 md:py-32">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(var(--primary),0.1),transparent_70%)]" />
-        <div className="container relative z-10 text-center space-y-6">
-          <h1 className="text-6xl md:text-8xl font-black tracking-tighter">
+        <div className="container relative z-10 text-center space-y-8 px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <h1 className="text-6xl md:text-8xl xl:text-9xl font-black tracking-tighter leading-none">
             Con<span className="text-primary">tato</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-medium">
-            Estou pronta para te ouvir. Escolha o canal que preferir e vamos conversar.
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-medium leading-relaxed">
+            Estou pronta para te ouvir. Escolha o canal que preferir e vamos iniciar sua jornada hoje mesmo.
           </p>
         </div>
       </section>
 
       {/* Contact Info Cards */}
-      <section className="py-12 -mt-10 relative z-20">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="py-12 -mt-16 relative z-20">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
             {[
               { icon: Phone, title: 'Telefone', val: CONTACT_INFO.phone, link: `tel:${CONTACT_INFO.phone}`, label: 'Ligar agora' },
               { icon: Mail, title: 'Email', val: CONTACT_INFO.email, link: `mailto:${CONTACT_INFO.email}`, label: 'Enviar email' },
               { icon: MapPin, title: 'Endereço', val: CONTACT_INFO.addressShort, link: GOOGLE_MAPS.mapsLink, label: 'Ver no mapa' },
             ].map((item, i) => (
-              <div key={i} className="p-8 bg-card border border-border rounded-[2.5rem] shadow-xl hover-lift text-center group">
-                <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all">
-                  <item.icon size={32} />
+              <div key={i} className="p-10 bg-card border border-border rounded-[3rem] shadow-2xl hover-lift text-center group">
+                <div className="w-20 h-20 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all">
+                  <item.icon size={40} />
                 </div>
-                <h3 className="text-xl font-black mb-2">{item.title}</h3>
-                <p className="text-muted-foreground font-medium mb-6 line-clamp-1">{item.val}</p>
+                <h3 className="text-2xl font-black mb-3">{item.title}</h3>
+                <p className="text-lg text-muted-foreground font-medium mb-8 line-clamp-1">{item.val}</p>
                 <a
                   href={item.link}
                   target={item.title === 'Endereço' ? '_blank' : undefined}
                   rel={item.title === 'Endereço' ? 'noopener noreferrer' : undefined}
-                  className="inline-block w-full py-3 bg-muted hover:bg-primary hover:text-white rounded-xl font-bold transition-all"
+                  className="inline-block w-full py-4 bg-muted hover:bg-primary hover:text-white rounded-2xl font-black text-lg transition-all"
                 >
                   {item.label}
                 </a>
@@ -83,75 +83,75 @@ export default function Contact() {
       </section>
 
       {/* Form and Map */}
-      <section className="py-24">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <section className="py-24 md:py-32 bg-background">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             {/* Form */}
-            <div className="p-10 bg-card border border-border rounded-[3rem] shadow-2xl">
-              <div className="mb-10">
-                <h2 className="text-3xl font-black tracking-tighter mb-2">Envie uma Mensagem</h2>
-                <p className="text-muted-foreground font-medium">Preencha os dados e fale diretamente comigo.</p>
+            <div className="p-12 md:p-16 bg-card border border-border rounded-[4rem] shadow-2xl">
+              <div className="mb-12">
+                <h2 className="text-4xl font-black tracking-tighter mb-4">Envie uma Mensagem</h2>
+                <p className="text-lg text-muted-foreground font-medium leading-relaxed">Preencha os dados e fale diretamente comigo para orientações personalizadas.</p>
               </div>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-1">Nome</label>
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  <div className="space-y-3">
+                    <label className="text-sm font-black uppercase tracking-widest text-muted-foreground ml-2">Nome</label>
                     <Input
                       type="text"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="Seu nome"
-                      className="h-14 rounded-2xl bg-muted/50 border-none focus:ring-2 ring-primary/20"
+                      placeholder="Seu nome completo"
+                      className="h-16 rounded-2xl bg-muted/50 border-none focus:ring-2 ring-primary/20 text-lg px-6"
                       required
                     />
                   </div>
-                  <div className="space-y-2">
-                    <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-1">Email</label>
+                  <div className="space-y-3">
+                    <label className="text-sm font-black uppercase tracking-widest text-muted-foreground ml-2">Email</label>
                     <Input
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="seu@email.com"
-                      className="h-14 rounded-2xl bg-muted/50 border-none focus:ring-2 ring-primary/20"
+                      className="h-16 rounded-2xl bg-muted/50 border-none focus:ring-2 ring-primary/20 text-lg px-6"
                       required
                     />
                   </div>
                 </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-1">Telefone</label>
+                <div className="space-y-3">
+                  <label className="text-sm font-black uppercase tracking-widest text-muted-foreground ml-2">Telefone</label>
                   <Input
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="(12) 99999-9999"
-                    className="h-14 rounded-2xl bg-muted/50 border-none focus:ring-2 ring-primary/20"
+                    className="h-16 rounded-2xl bg-muted/50 border-none focus:ring-2 ring-primary/20 text-lg px-6"
                     required
                   />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-1">Mensagem</label>
+                <div className="space-y-3">
+                  <label className="text-sm font-black uppercase tracking-widest text-muted-foreground ml-2">Mensagem</label>
                   <Textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Sua mensagem aqui..."
-                    className="rounded-2xl bg-muted/50 border-none focus:ring-2 ring-primary/20 min-h-[150px]"
+                    placeholder="Como posso te ajudar hoje?"
+                    className="rounded-3xl bg-muted/50 border-none focus:ring-2 ring-primary/20 min-h-[180px] text-lg p-6"
                     required
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full h-16 rounded-2xl bg-primary hover:bg-primary/90 text-white font-black text-lg shadow-xl shadow-primary/20 transition-all hover:scale-[1.02] active:scale-95 flex gap-3"
+                  className="w-full h-20 rounded-2xl bg-primary hover:bg-primary/90 text-white font-black text-xl shadow-2xl shadow-primary/20 transition-all hover:scale-[1.02] active:scale-95 flex gap-4"
                 >
-                  <Send size={20} />
+                  <Send size={24} />
                   Enviar via WhatsApp
                 </Button>
                 {submitted && (
-                  <p className="text-sm text-secondary font-bold text-center animate-bounce">
+                  <p className="text-lg text-secondary font-black text-center animate-bounce">
                     Mensagem enviada com sucesso!
                   </p>
                 )}
@@ -159,8 +159,8 @@ export default function Contact() {
             </div>
 
             {/* Map */}
-            <div className="space-y-8">
-              <div className="h-full min-h-[400px] rounded-[3rem] overflow-hidden border-8 border-card shadow-2xl relative">
+            <div className="space-y-8 flex flex-col">
+              <div className="flex-1 min-h-[500px] rounded-[4rem] overflow-hidden border-8 border-card shadow-2xl relative">
                 <iframe
                   src={GOOGLE_MAPS.embedUrl}
                   width="100%"

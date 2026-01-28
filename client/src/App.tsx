@@ -55,7 +55,7 @@ function App() {
           <Toaster />
           <div className="flex flex-col md:flex-row min-h-screen">
             <SidebarMenu />
-            <main className="flex-1 w-full pt-16 md:pt-0 md:pl-20">
+            <main className="flex-1 w-full pt-16 md:pt-0 md:pl-32">
               <Router />
             </main>
           </div>

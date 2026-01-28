@@ -148,7 +148,7 @@ export default function SidebarMenu() {
       {/* Desktop Sidebar */}
       <aside
         className={`
-          fixed left-0 top-0 h-screen z-50 hidden md:flex flex-col
+          fixed left-0 top-0 h-screen z-[100] hidden md:flex flex-col
           ${glassClasses} border-r transition-all duration-500 ease-in-out
           ${isExpanded ? 'w-64' : 'w-20'}
         `}

@@ -8,7 +8,7 @@ export default function AboutMe() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden py-20">
+      <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden py-24 md:py-32">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(var(--secondary),0.05),transparent_70%)]" />
         
         <div className="container relative z-10 px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
@@ -64,7 +64,7 @@ export default function AboutMe() {
                     { icon: BookOpen, text: 'Base Científica' },
                     { icon: Heart, text: 'Foco no Bem-estar' },
                   ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3 p-4 bg-card border border-border rounded-2xl hover:border-primary/50 transition-colors">
+                    <div key={i} className="flex items-center gap-3 p-4 bg-card border border-border rounded-2xl hover:border-primary/50 transition-colors shadow-sm">
                       <item.icon className="text-primary" size={20} />
                       <span className="text-sm font-bold text-foreground">{item.text}</span>
                     </div>
@@ -77,61 +77,57 @@ export default function AboutMe() {
       </section>
 
       {/* Achievement Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-24 md:py-32 bg-muted/30">
         <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="space-y-8 text-center lg:text-left">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+            <div className="space-y-10 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
                 <Trophy size={16} className="text-primary fill-primary" />
                 <p className="text-xs md:text-sm font-bold text-primary uppercase tracking-widest">Conquistas</p>
               </div>
               
-              <h2 className="text-4xl md:text-6xl font-black tracking-tighter">Minha Trajetória Profissional</h2>
+              <h2 className="text-4xl md:text-6xl xl:text-7xl font-black tracking-tighter">Minha Trajetória Profissional</h2>
               
-              <p className="text-base md:text-lg text-muted-foreground font-medium leading-relaxed">
+              <p className="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">
                 Minha trajetória profissional é construída com dedicação, estudo contínuo e resultados reais na vida dos meus pacientes.
               </p>
               
-              <p className="text-base md:text-lg text-muted-foreground font-medium leading-relaxed">
-                Ao longo dos anos, recebi inúmeros reconhecimentos e avaliações positivas, reflexo do cuidado individualizado e do compromisso verdadeiro com a saúde de cada pessoa que atendo.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="p-6 md:p-8 bg-card border border-border rounded-[2rem] hover-lift">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary/10 rounded-xl">
-                      <Award className="text-primary" size={24} />
+              <div className="space-y-6">
+                <div className="p-8 md:p-10 bg-card border border-border rounded-[2.5rem] hover-lift shadow-sm">
+                  <div className="flex items-start gap-6">
+                    <div className="p-4 bg-primary/10 rounded-2xl">
+                      <Award className="text-primary" size={32} />
                     </div>
                     <div>
-                      <h3 className="text-xl md:text-2xl font-bold text-primary mb-2">Reconhecimentos</h3>
-                      <p className="text-muted-foreground font-medium leading-relaxed">
-                        Fui homenageada com o título de <span className="text-foreground font-bold">Nutricionista do Ano</span> por votação popular e também recebi o reconhecimento por mérito de atendimento, na cidade de São José dos Campos — prêmios que reforçam a confiança e o impacto do meu trabalho.
+                      <h3 className="text-2xl md:text-3xl font-bold text-primary mb-3">Reconhecimentos</h3>
+                      <p className="text-muted-foreground font-medium leading-relaxed text-lg">
+                        Fui homenageada com o título de <span className="text-foreground font-bold">Nutricionista do Ano</span> por votação popular e também recebi o reconhecimento por mérito de atendimento, na cidade de São José dos Campos.
                       </p>
                     </div>
                   </div>
                 </div>
                 
-                <div className="p-6 md:p-8 bg-card border border-border rounded-[2rem] hover-lift">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-secondary/10 rounded-xl">
-                      <Trophy className="text-secondary" size={24} />
+                <div className="p-8 md:p-10 bg-card border border-border rounded-[2.5rem] hover-lift shadow-sm">
+                  <div className="flex items-start gap-6">
+                    <div className="p-4 bg-secondary/10 rounded-2xl">
+                      <Trophy className="text-secondary" size={32} />
                     </div>
                     <div>
-                      <h3 className="text-xl md:text-2xl font-bold text-secondary mb-2">Conquistas Esportivas</h3>
-                      <p className="text-muted-foreground font-medium leading-relaxed">
-                        Como atleta amadora e ultramaratonista, também acumulo troféus em competições de corrida de rua, incluindo provas de meia maratona e ultramaratonas, sempre buscando evolução, disciplina e superação. Essa vivência me permite inspirar meus pacientes a acreditarem no próprio potencial e na sua capacidade de transformação.
+                      <h3 className="text-2xl md:text-3xl font-bold text-secondary mb-3">Conquistas Esportivas</h3>
+                      <p className="text-muted-foreground font-medium leading-relaxed text-lg">
+                        Como atleta amadora e ultramaratonista, acumulo troféus em competições de corrida de rua, incluindo provas de meia maratona e ultramaratonas.
                       </p>
                     </div>
                   </div>
                 </div>
                 
-                <div className="p-6 md:p-8 bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-[2rem]">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-primary/20 rounded-xl">
-                      <Target className="text-primary" size={24} />
+                <div className="p-10 bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-[3rem] shadow-sm">
+                  <div className="flex items-start gap-6">
+                    <div className="p-4 bg-primary/20 rounded-2xl">
+                      <Target className="text-primary" size={32} />
                     </div>
                     <div>
-                      <p className="text-foreground font-bold text-base md:text-lg leading-relaxed">
+                      <p className="text-foreground font-bold text-xl md:text-2xl leading-relaxed">
                         Cada conquista profissional e esportiva fortalece o meu propósito: transformar vidas por meio da saúde, do equilíbrio e do cuidado integral.
                       </p>
                     </div>
@@ -141,8 +137,8 @@ export default function AboutMe() {
             </div>
             
             <div className="relative group">
-              <div className="absolute inset-0 bg-secondary/20 rounded-[3rem] rotate-3 group-hover:rotate-6 transition-transform duration-500" />
-              <div className="relative rounded-[3rem] overflow-hidden border-8 border-card shadow-2xl">
+              <div className="absolute inset-0 bg-secondary/20 rounded-[4rem] rotate-3 group-hover:rotate-6 transition-transform duration-500 blur-xl" />
+              <div className="relative rounded-[4rem] overflow-hidden border-8 border-card shadow-2xl">
                 <img
                   src={FEATURED_IMAGES.aboutAchievement}
                   alt="Conquista Profissional"
@@ -154,23 +150,23 @@ export default function AboutMe() {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="py-16 md:py-24 overflow-hidden">
-        <div className="container mb-16 text-center px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4">Galeria de Conquistas</h2>
-          <p className="text-lg text-muted-foreground font-medium">Momentos que marcaram minha trajetória e o sucesso dos meus pacientes.</p>
+      {/* Gallery Section - Animada com Loop Infinito */}
+      <section className="py-24 md:py-32 overflow-hidden bg-background">
+        <div className="container mb-20 text-center px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-6xl xl:text-7xl font-black tracking-tighter mb-6">Galeria de Conquistas</h2>
+          <p className="text-xl text-muted-foreground font-medium max-w-3xl mx-auto">Momentos que marcaram minha trajetória e o sucesso dos meus pacientes.</p>
         </div>
         <Gallery />
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 md:py-24 bg-card border-y border-border">
-        <div className="container text-center max-w-4xl mx-auto space-y-8 px-6 md:px-8 lg:px-12">
-          <h2 className="text-4xl md:text-6xl font-black tracking-tighter">Vamos escrever sua história de sucesso?</h2>
-          <p className="text-xl text-muted-foreground font-medium">Estou pronta para te guiar nessa jornada de transformação.</p>
+      <section className="py-24 md:py-32 bg-card border-y border-border">
+        <div className="container text-center max-w-5xl mx-auto space-y-10 px-6 md:px-8 lg:px-12">
+          <h2 className="text-5xl md:text-8xl font-black tracking-tighter leading-none">Vamos escrever sua história de sucesso?</h2>
+          <p className="text-xl md:text-2xl text-muted-foreground font-medium">Estou pronta para te guiar nessa jornada de transformação.</p>
           <a
             href="/contact"
-            className="inline-flex items-center justify-center px-12 py-6 bg-primary text-white rounded-2xl font-black text-xl hover:scale-110 transition-all shadow-xl shadow-primary/20"
+            className="inline-flex items-center justify-center px-16 py-8 bg-primary text-white rounded-3xl font-black text-2xl hover:scale-110 transition-all shadow-2xl shadow-primary/20 active:scale-95"
           >
             Agendar Consulta
           </a>
