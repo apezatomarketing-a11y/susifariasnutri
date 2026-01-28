@@ -132,7 +132,12 @@ export const FEATURED_IMAGES = {
 // Videos
 export const VIDEOS = {
   home: '/assets/videos/video inicio.MOV',
-  mounjaro: '/assets/videos/video mounjaro.MOV',
+  mounjaro: '/assets/videos/video_mounjaro.mp4',
+} as const;
+
+// Documents
+export const DOCUMENTS = {
+  relatorioServicos: '/assets/documents/relatorio_servicos.pdf',
 } as const;
 
 // Footer Links

@@ -1,7 +1,7 @@
 import FloatingButtons from '@/components/FloatingButtons';
 import Footer from '@/components/Footer';
-import { SERVICES, CONTACT_INFO } from '@/lib/constants';
-import { MessageCircle, Stethoscope, Package, Activity, Flower2, Pill } from 'lucide-react';
+import { SERVICES, CONTACT_INFO, DOCUMENTS } from '@/lib/constants';
+import { MessageCircle, Stethoscope, Package, Activity, Flower2, Pill, FileText } from 'lucide-react';
 
 const ICON_MAP: Record<string, React.ReactNode> = {
   Stethoscope: <Stethoscope size={32} />,
@@ -115,6 +115,27 @@ export default function Services() {
                 </button>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Report Section */}
+      <section className="py-20 bg-primary/5">
+        <div className="container text-center">
+          <div className="max-w-3xl mx-auto p-8 bg-card border border-border rounded-xl shadow-sm">
+            <FileText className="w-16 h-16 text-primary mx-auto mb-6" />
+            <h2 className="text-3xl font-bold mb-4">Relatório de Serviços</h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Acesse nosso relatório detalhado para conhecer mais sobre a metodologia e os resultados esperados.
+            </p>
+            <a
+              href={DOCUMENTS.relatorioServicos}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium"
+            >
+              Visualizar Relatório (PDF)
+            </a>
           </div>
         </div>
       </section>
