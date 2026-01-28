@@ -1,7 +1,7 @@
 import FloatingButtons from '@/components/FloatingButtons';
 import Footer from '@/components/Footer';
 import { WHATSAPP_MESSAGES, CONTACT_INFO } from '@/lib/constants';
-import { MessageCircle, Zap } from 'lucide-react';
+import { MessageCircle, Zap, Dumbbell, Timer, Droplets, Target, TrendingUp } from 'lucide-react';
 
 export default function NutritionSports() {
   const handleWhatsApp = (message: string) => {
@@ -12,116 +12,86 @@ export default function NutritionSports() {
 
   const topics = [
     {
-      title: 'Nutrição Pré-Treino',
-      description: 'Alimentação estratégica para maximizar energia e desempenho.',
-      tips: [
-        'Carboidratos de fácil absorção',
-        'Proteína de rápida digestão',
-        'Hidratação adequada',
-        'Timing correto',
-      ],
+      title: 'Pré-Treino',
+      icon: Timer,
+      description: 'Estratégias para maximizar energia e foco durante o exercício.',
+      tips: ['Carboidratos estratégicos', 'Proteína funcional', 'Timing nutricional'],
     },
     {
-      title: 'Nutrição Pós-Treino',
-      description: 'Recuperação muscular e reposição de energia.',
-      tips: [
-        'Proteína para síntese muscular',
-        'Carboidratos para recuperação',
-        'Antioxidantes',
-        'Hidratação e eletrólitos',
-      ],
+      title: 'Pós-Treino',
+      icon: TrendingUp,
+      description: 'Recuperação acelerada e síntese proteica otimizada.',
+      tips: ['Janela de recuperação', 'Reposição de glicogênio', 'Aminoácidos essenciais'],
     },
     {
-      title: 'Suplementação Esportiva',
-      description: 'Suplementos comprovados para melhorar desempenho.',
-      tips: [
-        'Whey Protein',
-        'Creatina',
-        'BCAAs',
-        'Vitaminas e minerais',
-      ],
+      title: 'Suplementação',
+      icon: Zap,
+      description: 'Uso inteligente de suplementos com comprovação científica.',
+      tips: ['Creatina e Beta-alanina', 'Whey e Caseína', 'Vitaminas esportivas'],
     },
     {
       title: 'Hidratação',
-      description: 'Estratégia de hidratação para ótimo desempenho.',
-      tips: [
-        'Água como base',
-        'Eletrólitos em exercícios longos',
-        'Bebidas isotônicas',
-        'Monitoramento de peso',
-      ],
+      icon: Droplets,
+      description: 'Equilíbrio hidroeletrolítico para performance máxima.',
+      tips: ['Reposição de sais', 'Isotônicos naturais', 'Controle de desidratação'],
     },
     {
-      title: 'Composição Corporal',
-      description: 'Nutrição para ganho de massa ou perda de gordura.',
-      tips: [
-        'Balanço calórico',
-        'Proteína adequada',
-        'Treino de força',
-        'Consistência',
-      ],
+      title: 'Hipertrofia',
+      icon: Dumbbell,
+      description: 'Protocolos específicos para ganho de massa muscular magra.',
+      tips: ['Superávit controlado', 'Divisão de macros', 'Consistência anabólica'],
     },
     {
-      title: 'Periodização Nutricional',
-      description: 'Nutrição adaptada às fases do treinamento.',
-      tips: [
-        'Fase de ganho',
-        'Fase de definição',
-        'Fase de manutenção',
-        'Ajustes estratégicos',
-      ],
+      title: 'Periodização',
+      icon: Target,
+      description: 'Nutrição adaptada ao seu ciclo de treinamento.',
+      tips: ['Fase de força', 'Fase de cutting', 'Manutenção atlética'],
     },
-  ];
-
-  const benefits = [
-    'Aumento de desempenho',
-    'Recuperação mais rápida',
-    'Ganho de massa muscular',
-    'Redução de gordura',
-    'Prevenção de lesões',
-    'Melhora de energia',
-    'Resistência aumentada',
-    'Bem-estar geral',
   ];
 
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative min-h-96 flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
-        <div className="container relative z-10 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Nutrição Esportiva</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Otimize seu desempenho atlético com nutrição científica e personalizada.
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden py-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(var(--secondary),0.1),transparent_70%)]" />
+        <div className="container relative z-10 text-center space-y-6">
+          <h1 className="text-6xl md:text-8xl font-black tracking-tighter">
+            Nutrição <span className="text-secondary">Esportiva</span>
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-medium">
+            Leve seu desempenho ao próximo nível com estratégias de nutrição de elite.
           </p>
         </div>
       </section>
 
       {/* Topics Grid */}
-      <section className="py-20">
+      <section className="py-24">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {topics.map((topic, index) => (
               <div
                 key={index}
-                className="p-8 bg-card border border-border rounded-lg hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
+                className="group p-10 bg-card border border-border rounded-[2.5rem] hover-glow transition-all duration-500 flex flex-col"
               >
-                <h3 className="text-2xl font-bold text-primary mb-3">{topic.title}</h3>
-                <p className="text-muted-foreground mb-4">{topic.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {topic.tips.map((tip, tipIndex) => (
-                    <li key={tipIndex} className="flex items-center gap-2 text-sm">
-                      <Zap size={14} className="text-secondary flex-shrink-0" />
+                <div className="w-16 h-16 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                  <topic.icon size={32} />
+                </div>
+                <h3 className="text-2xl font-black mb-4 group-hover:text-secondary transition-colors">{topic.title}</h3>
+                <p className="text-muted-foreground font-medium mb-6 leading-relaxed">{topic.description}</p>
+                <ul className="space-y-3 mb-8 flex-1">
+                  {topic.tips.map((tip, idx) => (
+                    <li key={idx} className="flex items-center gap-3 text-sm font-bold text-foreground/70">
+                      <Zap size={14} className="text-secondary" />
                       {tip}
                     </li>
                   ))}
                 </ul>
                 <button
                   onClick={() => handleWhatsApp(WHATSAPP_MESSAGES.nutritionSports)}
-                  className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-secondary/10 hover:bg-secondary/20 text-secondary rounded-lg transition-colors duration-200 font-medium"
+                  className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-muted hover:bg-secondary hover:text-white text-foreground rounded-2xl transition-all duration-300 font-bold"
                 >
-                  <MessageCircle size={16} />
-                  Saiba Mais
+                  <MessageCircle size={20} />
+                  Otimizar Treino
                 </button>
               </div>
             ))}
@@ -129,18 +99,15 @@ export default function NutritionSports() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-card/50 border-y border-border">
-        <div className="container">
-          <h2 className="text-4xl font-bold mb-12 text-center">Benefícios da Nutrição Esportiva</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="p-6 bg-background border border-border rounded-lg text-center hover:border-primary transition-colors duration-200"
-              >
-                <Zap className="w-8 h-8 text-secondary mx-auto mb-3" />
-                <p className="font-medium">{benefit}</p>
+      {/* Benefits Banner */}
+      <section className="py-24 bg-secondary/5 border-y border-secondary/10">
+        <div className="container text-center">
+          <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-16">O Atleta de Elite Nutre seu Sucesso</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {['Força Extrema', 'Foco Mental', 'Recuperação 2x', 'Energia Infinita'].map((b, i) => (
+              <div key={i} className="space-y-2">
+                <div className="text-3xl font-black text-secondary">{b}</div>
+                <div className="h-1 w-12 bg-secondary mx-auto rounded-full" />
               </div>
             ))}
           </div>
@@ -148,27 +115,24 @@ export default function NutritionSports() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container text-center">
-          <h2 className="text-4xl font-bold mb-6">Potencialize Seu Desempenho</h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Agende uma consulta e receba um plano nutricional personalizado para seus objetivos atlético.
-          </p>
-          <button
-            onClick={() => handleWhatsApp(WHATSAPP_MESSAGES.nutritionSports)}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium text-lg"
-          >
-            <MessageCircle size={20} />
-            Agendar Consulta
-          </button>
+      <section className="py-24 container">
+        <div className="relative p-12 md:p-20 bg-secondary rounded-[4rem] overflow-hidden text-center text-white">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(255,255,255,0.1),transparent)]" />
+          <div className="relative z-10 space-y-8 max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter">Alcance seu auge físico.</h2>
+            <p className="text-lg md:text-xl text-secondary-foreground/80 font-medium">Protocolos esportivos personalizados para quem não aceita menos que o topo.</p>
+            <button
+              onClick={() => handleWhatsApp(WHATSAPP_MESSAGES.nutritionSports)}
+              className="px-12 py-6 bg-white text-secondary rounded-2xl font-black text-xl hover:scale-110 transition-all shadow-2xl active:scale-95"
+            >
+              Começar Agora
+            </button>
+          </div>
         </div>
       </section>
 
-      {/* Floating Buttons */}
-      <FloatingButtons />
-
-      {/* Footer */}
       <Footer />
+      <FloatingButtons />
     </div>
   );
 }

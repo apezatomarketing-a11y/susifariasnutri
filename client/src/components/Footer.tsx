@@ -72,28 +72,31 @@ Este site pode conter links para serviços de terceiros que usam seus próprios 
 
   return (
     <>
-      <footer className="bg-card border-t border-border mt-20">
-        <div className="container py-12">
+      <footer className="bg-card border-t border-border mt-20 relative overflow-hidden">
+        {/* Background Decorative Elements */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-primary opacity-30" />
+        
+        <div className="container py-16 relative z-10">
           {/* Main Footer Content */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 text-center md:text-left">
             {/* Brand */}
-            <div className="flex flex-col items-center md:items-start">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white font-bold text-xl">SF</span>
+            <div className="flex flex-col items-center md:items-start group">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 cursor-pointer">
+                <span className="text-white font-bold text-2xl">SF</span>
               </div>
-              <h3 className="font-bold text-lg mb-2">{COMPANY_INFO.name}</h3>
-              <p className="text-sm text-muted-foreground">{COMPANY_INFO.tagline}</p>
+              <h3 className="font-bold text-xl mb-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">{COMPANY_INFO.name}</h3>
+              <p className="text-sm text-muted-foreground font-medium max-w-[200px]">{COMPANY_INFO.tagline}</p>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h4 className="font-semibold mb-4">Navegação</h4>
-              <nav className="space-y-2">
+              <h4 className="font-bold text-foreground mb-6 uppercase tracking-wider text-xs">Navegação</h4>
+              <nav className="space-y-3">
                 {FOOTER_LINKS.map((link) => (
                   <button
                     key={link.label}
                     onClick={() => handleNavigation(link.href)}
-                    className="block text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
+                    className="block text-sm text-muted-foreground hover:text-primary hover:pl-2 transition-all duration-300 font-medium"
                   >
                     {link.label}
                   </button>
@@ -103,76 +106,53 @@ Este site pode conter links para serviços de terceiros que usam seus próprios 
 
             {/* Social Media */}
             <div>
-              <h4 className="font-semibold mb-4">Redes Sociais</h4>
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href={SOCIAL_MEDIA.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg transition-colors duration-200"
-                  title="Instagram"
-                >
-                  <Instagram size={18} />
-                </a>
-                <a
-                  href={SOCIAL_MEDIA.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg transition-colors duration-200"
-                  title="Facebook"
-                >
-                  <Facebook size={18} />
-                </a>
-                <a
-                  href={SOCIAL_MEDIA.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg transition-colors duration-200"
-                  title="LinkedIn"
-                >
-                  <Linkedin size={18} />
-                </a>
-                <a
-                  href={SOCIAL_MEDIA.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg transition-colors duration-200"
-                  title="YouTube"
-                >
-                  <Youtube size={18} />
-                </a>
-                <a
-                  href={`mailto:${SOCIAL_MEDIA.google}`}
-                  className="p-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg transition-colors duration-200"
-                  title="Google"
-                >
-                  <Mail size={18} />
-                </a>
+              <h4 className="font-bold text-foreground mb-6 uppercase tracking-wider text-xs">Conecte-se</h4>
+              <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                {[
+                  { icon: Instagram, url: SOCIAL_MEDIA.instagram, label: 'Instagram' },
+                  { icon: Facebook, url: SOCIAL_MEDIA.facebook, label: 'Facebook' },
+                  { icon: Linkedin, url: SOCIAL_MEDIA.linkedin, label: 'LinkedIn' },
+                  { icon: Youtube, url: SOCIAL_MEDIA.youtube, label: 'YouTube' },
+                  { icon: Mail, url: `mailto:${CONTACT_INFO.email}`, label: 'Email' },
+                ].map((social, idx) => (
+                  <a
+                    key={idx}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 bg-primary/5 hover:bg-primary text-primary hover:text-white rounded-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/20"
+                    title={social.label}
+                  >
+                    <social.icon size={20} />
+                  </a>
+                ))}
               </div>
             </div>
 
             {/* Contact Info */}
             <div>
-              <h4 className="font-semibold mb-4">Contato</h4>
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <p>
-                  <span className="text-primary font-medium">WhatsApp:</span> (12) 99136-3030
-                </p>
-                <p>
-                  <span className="text-primary font-medium">Email:</span> susileoni@yahoo.com.br
-                </p>
+              <h4 className="font-bold text-foreground mb-6 uppercase tracking-wider text-xs">Contato</h4>
+              <div className="space-y-4 text-sm text-muted-foreground">
+                <div className="flex flex-col gap-1">
+                  <span className="text-primary font-bold text-xs uppercase">WhatsApp</span>
+                  <p className="font-medium">{CONTACT_INFO.phone}</p>
+                </div>
+                <div className="flex flex-col gap-1">
+                  <span className="text-primary font-bold text-xs uppercase">Email</span>
+                  <p className="font-medium">{CONTACT_INFO.email}</p>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Policies */}
-          <div className="border-t border-border pt-8 mb-8">
-            <div className="flex flex-wrap justify-center gap-6 text-sm">
+          <div className="border-t border-border/50 pt-10 mb-10">
+            <div className="flex flex-wrap justify-center gap-8 text-xs font-bold uppercase tracking-widest">
               {POLICY_LINKS.map((link) => (
                 <button
                   key={link.label}
                   onClick={() => setOpenPolicy(link.label.toLowerCase().split(' ')[0])}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                  className="text-muted-foreground hover:text-primary transition-colors duration-300"
                 >
                   {link.label}
                 </button>
@@ -181,17 +161,17 @@ Este site pode conter links para serviços de terceiros que usam seus próprios 
           </div>
 
           {/* Copyright */}
-          <div className="text-center text-sm text-muted-foreground border-t border-border pt-8">
-            <p className="mb-2">
+          <div className="text-center text-xs text-muted-foreground/60 font-medium">
+            <p className="mb-3">
               © {COMPANY_INFO.year} {COMPANY_INFO.name}. Todos os direitos reservados.
             </p>
             <p>
-              Desenvolvido por{' '}
+              Design & Desenvolvimento por{' '}
               <a
                 href={COMPANY_INFO.developedByUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary hover:underline font-medium"
+                className="text-primary/80 hover:text-primary hover:underline transition-colors"
               >
                 {COMPANY_INFO.developedBy}
               </a>
@@ -202,13 +182,13 @@ Este site pode conter links para serviços de terceiros que usam seus próprios 
 
       {/* Policy Dialogs */}
       <Dialog open={openPolicy !== null} onOpenChange={(open) => !open && setOpenPolicy(null)}>
-        <DialogContent className="max-h-96 overflow-y-auto">
+        <DialogContent className="max-h-[80vh] overflow-y-auto glass-effect border-primary/20">
           <DialogHeader>
-            <DialogTitle>
+            <DialogTitle className="text-2xl font-bold text-primary">
               {openPolicy === 'política' ? 'Política de Privacidade' : openPolicy === 'termos' ? 'Termos de Uso' : 'Política de Cookies'}
             </DialogTitle>
           </DialogHeader>
-          <div className="whitespace-pre-wrap text-sm text-muted-foreground">
+          <div className="whitespace-pre-wrap text-sm text-muted-foreground leading-relaxed">
             {openPolicy === 'política' && policyContent.privacy}
             {openPolicy === 'termos' && policyContent.terms}
             {openPolicy === 'política' && policyContent.cookies}

@@ -7,7 +7,7 @@ export default function FloatingButtons() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 300);
+      setShowScrollTop(window.scrollY > 400);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -25,29 +25,29 @@ export default function FloatingButtons() {
   };
 
   return (
-    <>
-      {/* WhatsApp Button - Bottom Right */}
+    <div className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[60] flex flex-col gap-4">
+      {/* Scroll to Top Button */}
       <button
-        onClick={handleWhatsAppClick}
-        className="fixed bottom-8 right-8 z-40 p-4 bg-gradient-to-br from-secondary to-secondary/80 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse-slow will-change-transform hover:scale-110 md:bottom-12 md:right-12"
-        title="Enviar mensagem via WhatsApp"
-        aria-label="WhatsApp"
+        onClick={handleScrollTop}
+        className={`
+          p-4 bg-card/80 backdrop-blur-md border border-border text-primary rounded-2xl shadow-xl 
+          transition-all duration-500 hover:bg-primary hover:text-white hover:-translate-y-2
+          ${showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}
+        `}
+        title="Voltar ao topo"
       >
-        <MessageCircle size={24} />
+        <ArrowUp size={24} />
       </button>
 
-      {/* Scroll to Top Button - Bottom Left */}
-      {showScrollTop && (
-        <button
-          onClick={handleScrollTop}
-          className="fixed bottom-8 left-8 z-40 px-4 py-3 bg-gradient-to-br from-primary to-primary/80 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 animate-slide-in will-change-transform hover:scale-105 flex items-center gap-2 md:bottom-12 md:left-12"
-          title="Voltar ao topo"
-          aria-label="Voltar ao topo"
-        >
-          <ArrowUp size={18} />
-          <span className="text-sm font-medium hidden sm:inline">Topo</span>
-        </button>
-      )}
-    </>
+      {/* WhatsApp Button */}
+      <button
+        onClick={handleWhatsAppClick}
+        className="group relative p-4 bg-green-500 text-white rounded-2xl shadow-xl shadow-green-500/20 transition-all duration-500 hover:scale-110 hover:-rotate-6 active:scale-95"
+        title="Enviar mensagem via WhatsApp"
+      >
+        <div className="absolute inset-0 bg-green-400 rounded-2xl animate-ping opacity-20 group-hover:hidden" />
+        <MessageCircle size={24} className="relative z-10" />
+      </button>
+    </div>
   );
 }

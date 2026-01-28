@@ -53,9 +53,9 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
-          <div className="flex">
+          <div className="flex flex-col md:flex-row min-h-screen">
             <SidebarMenu />
-            <main className="flex-1 md:ml-64">
+            <main className="flex-1 w-full pt-16 md:pt-0 md:pl-20">
               <Router />
             </main>
           </div>

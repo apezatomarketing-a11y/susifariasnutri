@@ -1,7 +1,7 @@
 import FloatingButtons from '@/components/FloatingButtons';
 import Footer from '@/components/Footer';
 import { WHATSAPP_MESSAGES, CONTACT_INFO } from '@/lib/constants';
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle, Activity, Heart, Thermometer, User, Flower2, Zap } from 'lucide-react';
 
 export default function NutritionClinical() {
   const handleWhatsApp = (message: string) => {
@@ -13,114 +13,85 @@ export default function NutritionClinical() {
   const conditions = [
     {
       title: 'Diabetes',
+      icon: Activity,
       description: 'Controle glicêmico através de uma alimentação estratégica e personalizada.',
-      details: [
-        'Monitoramento de carboidratos',
-        'Controle de índice glicêmico',
-        'Educação alimentar contínua',
-        'Acompanhamento de exames',
-      ],
+      details: ['Monitoramento de carboidratos', 'Controle de índice glicêmico', 'Educação alimentar contínua'],
     },
     {
       title: 'Hipertensão',
+      icon: Heart,
       description: 'Redução de sódio e otimização de nutrientes para controle da pressão arterial.',
-      details: [
-        'Redução de sódio',
-        'Aumento de potássio',
-        'Controle de peso',
-        'Educação sobre rótulos',
-      ],
+      details: ['Redução de sódio', 'Aumento de potássio', 'Controle de peso'],
     },
     {
       title: 'Menopausa',
+      icon: Thermometer,
       description: 'Nutrição adequada para aliviar sintomas e manter qualidade de vida.',
-      details: [
-        'Aumento de cálcio',
-        'Fitoestrógenos',
-        'Vitaminas e minerais',
-        'Alimentos funcionais',
-      ],
+      details: ['Aumento de cálcio', 'Fitoestrógenos', 'Vitaminas e minerais'],
     },
     {
-      title: 'Ovário Policístico (SOP)',
+      title: 'Ovário Policístico',
+      icon: Flower2,
       description: 'Alimentação anti-inflamatória e hormonal para SOP.',
-      details: [
-        'Redução de inflamação',
-        'Controle de insulina',
-        'Alimentos anti-inflamatórios',
-        'Suplementação adequada',
-      ],
+      details: ['Redução de inflamação', 'Controle de insulina', 'Suplementação adequada'],
     },
     {
       title: 'Saúde da Mulher',
+      icon: User,
       description: 'Nutrição específica para cada fase da vida da mulher.',
-      details: [
-        'Menarca e ciclo menstrual',
-        'Gravidez e lactação',
-        'Menopausa',
-        'Prevenção de doenças',
-      ],
+      details: ['Ciclo menstrual', 'Gravidez e lactação', 'Prevenção de doenças'],
     },
     {
-      title: 'Menarca',
-      description: 'Nutrição adequada para adolescentes em transição.',
-      details: [
-        'Ferro e cálcio',
-        'Vitaminas do complexo B',
-        'Educação alimentar',
-        'Hábitos saudáveis',
-      ],
-    },
-    {
-      title: 'Baixo Libido',
-      description: 'Nutrição para melhorar desempenho sexual e libido.',
-      details: [
-        'Alimentos afrodisíacos',
-        'Circulação sanguínea',
-        'Hormônios sexuais',
-        'Bem-estar geral',
-      ],
+      title: 'Metabolismo',
+      icon: Zap,
+      description: 'Otimização metabólica e melhora da disposição diária.',
+      details: ['Perfil lipídico', 'Energia celular', 'Equilíbrio hormonal'],
     },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative min-h-96 flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
-        <div className="container relative z-10 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Nutrição Clínica</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Tratamento nutricional personalizado para diversas condições clínicas, com foco em melhorar sua qualidade de vida.
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden py-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(var(--primary),0.1),transparent_70%)]" />
+        <div className="container relative z-10 text-center space-y-6">
+          <h1 className="text-6xl md:text-8xl font-black tracking-tighter">
+            Nutrição <span className="text-primary">Clínica</span>
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-medium">
+            Tratamento nutricional baseado em evidências para o controle e prevenção de patologias.
           </p>
         </div>
       </section>
 
       {/* Conditions Grid */}
-      <section className="py-20">
+      <section className="py-24">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {conditions.map((condition, index) => (
               <div
                 key={index}
-                className="p-8 bg-card border border-border rounded-lg hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
+                className="group p-10 bg-card border border-border rounded-[2.5rem] hover-glow transition-all duration-500 flex flex-col"
               >
-                <h3 className="text-2xl font-bold text-primary mb-3">{condition.title}</h3>
-                <p className="text-muted-foreground mb-4">{condition.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {condition.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-center gap-2 text-sm">
-                      <span className="w-1.5 h-1.5 bg-secondary rounded-full" />
+                <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                  <condition.icon size={32} />
+                </div>
+                <h3 className="text-2xl font-black mb-4 group-hover:text-primary transition-colors">{condition.title}</h3>
+                <p className="text-muted-foreground font-medium mb-6 leading-relaxed">{condition.description}</p>
+                <ul className="space-y-3 mb-8 flex-1">
+                  {condition.details.map((detail, idx) => (
+                    <li key={idx} className="flex items-center gap-3 text-sm font-bold text-foreground/70">
+                      <div className="w-1.5 h-1.5 bg-secondary rounded-full" />
                       {detail}
                     </li>
                   ))}
                 </ul>
                 <button
                   onClick={() => handleWhatsApp(WHATSAPP_MESSAGES.nutritionClinical)}
-                  className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-secondary/10 hover:bg-secondary/20 text-secondary rounded-lg transition-colors duration-200 font-medium"
+                  className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-muted hover:bg-primary hover:text-white text-foreground rounded-2xl transition-all duration-300 font-bold"
                 >
-                  <MessageCircle size={16} />
-                  Saiba Mais
+                  <MessageCircle size={20} />
+                  Saber Mais
                 </button>
               </div>
             ))}
@@ -129,27 +100,24 @@ export default function NutritionClinical() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-card/50 border-y border-border">
-        <div className="container text-center">
-          <h2 className="text-4xl font-bold mb-6">Pronto para Transformar Sua Saúde?</h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Agende uma consulta comigo e descubra como a nutrição clínica pode ajudá-lo a alcançar seus objetivos de saúde.
-          </p>
-          <button
-            onClick={() => handleWhatsApp(WHATSAPP_MESSAGES.nutritionClinical)}
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium text-lg"
-          >
-            <MessageCircle size={20} />
-            Agendar Consulta
-          </button>
+      <section className="py-24 container">
+        <div className="relative p-12 md:p-20 bg-primary rounded-[4rem] overflow-hidden text-center text-white">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.1),transparent)]" />
+          <div className="relative z-10 space-y-8 max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter">Sua saúde não pode esperar.</h2>
+            <p className="text-lg md:text-xl text-primary-foreground/80 font-medium">Agende uma consulta clínica e inicie seu protocolo de tratamento personalizado.</p>
+            <button
+              onClick={() => handleWhatsApp(WHATSAPP_MESSAGES.nutritionClinical)}
+              className="px-12 py-6 bg-white text-primary rounded-2xl font-black text-xl hover:scale-110 transition-all shadow-2xl active:scale-95"
+            >
+              Agendar Agora
+            </button>
+          </div>
         </div>
       </section>
 
-      {/* Floating Buttons */}
-      <FloatingButtons />
-
-      {/* Footer */}
       <Footer />
+      <FloatingButtons />
     </div>
   );
 }

@@ -2,116 +2,126 @@ import Gallery from '@/components/Gallery';
 import FloatingButtons from '@/components/FloatingButtons';
 import Footer from '@/components/Footer';
 import { FEATURED_IMAGES } from '@/lib/constants';
+import { Award, BookOpen, Heart, ShieldCheck } from 'lucide-react';
 
 export default function AboutMe() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
-        <div className="absolute top-20 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
-
+      <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden py-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(var(--secondary),0.05),transparent_70%)]" />
+        
         <div className="container relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* Featured Image */}
-            <div className="relative h-96 md:h-full min-h-96 rounded-xl overflow-hidden border border-border order-2 md:order-1 shadow-2xl">
-              <img
-                src={FEATURED_IMAGES.aboutHighlight}
-                alt="Susi Farias - Destaque"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Featured Image Container */}
+            <div className="relative order-2 lg:order-1 group">
+              <div className="absolute inset-0 bg-primary/20 rounded-[3rem] -rotate-3 group-hover:-rotate-6 transition-transform duration-500" />
+              <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden border-4 border-card shadow-2xl">
+                <img
+                  src={FEATURED_IMAGES.aboutHighlight}
+                  alt="Susi Farias - Nutricionista"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
+              </div>
             </div>
 
             {/* Text Content */}
-            <div className="space-y-6 animate-slide-in order-1 md:order-2">
-              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
-                <p className="text-sm font-medium text-primary">👋 Conheça Minha História</p>
+            <div className="space-y-8 order-1 lg:order-2 text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 rounded-full border border-secondary/20 animate-in fade-in slide-in-from-bottom-4 duration-700">
+                <Heart size={16} className="text-secondary fill-secondary" />
+                <p className="text-xs md:text-sm font-bold text-secondary uppercase tracking-widest">Minha História</p>
               </div>
-              <h1 className="text-6xl md:text-7xl font-bold leading-tight">
-                Sobre <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Mim</span>
+              
+              <h1 className="text-5xl md:text-7xl font-black tracking-tighter leading-tight">
+                Susi <span className="text-primary">Farias</span>
               </h1>
-              <div className="space-y-4 text-lg text-muted-foreground">
-                <p>
-                  Olá! Sou Susi Farias, nutricionista clínica e esportiva com mais de 10 anos de experiência no atendimento nutricional.
+              
+              <div className="space-y-6 text-lg text-muted-foreground font-medium leading-relaxed">
+                <p className="animate-in fade-in slide-in-from-right-10 duration-700 delay-100">
+                  Nutricionista clínica e esportiva com mais de <span className="text-foreground font-bold">10 anos de experiência</span> transformando vidas através da alimentação consciente.
                 </p>
-                <p>
-                  Minha paixão é ajudar pessoas a transformarem suas vidas através de uma nutrição personalizada e consciente. Acredito que cada pessoa é única e merece um plano alimentar específico para suas necessidades.
+                <p className="animate-in fade-in slide-in-from-right-10 duration-700 delay-200">
+                  Acredito que a nutrição vai além de contar calorias; trata-se de nutrir o corpo, a mente e o espírito de forma equilibrada e prazerosa.
                 </p>
-                <p>
-                  Trabalho com diversas condições clínicas como diabetes, hipertensão, menopausa, ovário policístico e outras, sempre com uma abordagem humanizada e baseada em evidências científicas.
-                </p>
-                <p>
-                  Também sou especialista em nutrição esportiva, ajudando atletas e praticantes de atividades físicas a otimizarem seu desempenho através de uma alimentação estratégica.
-                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                  {[
+                    { icon: ShieldCheck, text: 'Abordagem Humanizada' },
+                    { icon: Award, text: 'Especialista em Clínica' },
+                    { icon: BookOpen, text: 'Base Científica' },
+                    { icon: Heart, text: 'Foco no Bem-estar' },
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3 p-4 bg-card border border-border rounded-2xl hover:border-primary/50 transition-colors">
+                      <item.icon className="text-primary" size={20} />
+                      <span className="text-sm font-bold text-foreground">{item.text}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Achievement Photo Section */}
-      <section className="py-20 bg-card/50 border-y border-border">
+      {/* Achievement Section */}
+      <section className="py-24 bg-muted/30">
         <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Minha Jornada</h2>
-            <p className="text-lg text-muted-foreground">Momentos marcantes na minha carreira profissional</p>
-          </div>
-          <div className="max-w-3xl mx-auto rounded-xl overflow-hidden border border-border shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <img
-              src={FEATURED_IMAGES.aboutAchievement}
-              alt="Conquista"
-              className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
-            />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8 text-center lg:text-left">
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter">Minha Jornada Profissional</h2>
+              <p className="text-xl text-muted-foreground font-medium leading-relaxed">
+                Cada conquista é o resultado de anos de estudo e dedicação aos meus pacientes.
+              </p>
+              <div className="space-y-4">
+                <div className="p-8 bg-card border border-border rounded-[2rem] hover-lift">
+                  <h3 className="text-2xl font-bold text-primary mb-2">Formação Contínua</h3>
+                  <p className="text-muted-foreground font-medium">Participação constante em congressos e especializações para trazer o que há de mais moderno na nutrição.</p>
+                </div>
+                <div className="p-8 bg-card border border-border rounded-[2rem] hover-lift">
+                  <h3 className="text-2xl font-bold text-secondary mb-2">Especialidades</h3>
+                  <p className="text-muted-foreground font-medium">Nutrição Clínica, Esportiva, Comportamental e protocolos de emagrecimento avançado.</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-secondary/20 rounded-[3rem] rotate-3 group-hover:rotate-6 transition-transform duration-500" />
+              <div className="relative rounded-[3rem] overflow-hidden border-8 border-card shadow-2xl">
+                <img
+                  src={FEATURED_IMAGES.aboutAchievement}
+                  alt="Conquista Profissional"
+                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Gallery Section */}
-      <section className="py-20">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Galeria de Conquistas</h2>
-            <p className="text-lg text-muted-foreground">Confira alguns momentos especiais da minha trajetória</p>
-          </div>
-          <Gallery />
+      <section className="py-24 overflow-hidden">
+        <div className="container mb-16 text-center">
+          <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4">Galeria de Conquistas</h2>
+          <p className="text-lg text-muted-foreground font-medium">Momentos que marcaram minha trajetória e o sucesso dos meus pacientes.</p>
+        </div>
+        <Gallery />
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-24 bg-card border-y border-border">
+        <div className="container text-center max-w-4xl mx-auto space-y-8">
+          <h2 className="text-4xl md:text-6xl font-black tracking-tighter">Vamos escrever sua história de sucesso?</h2>
+          <p className="text-xl text-muted-foreground font-medium">Estou pronta para te guiar nessa jornada de transformação.</p>
+          <a
+            href="/contact"
+            className="inline-flex items-center justify-center px-12 py-6 bg-primary text-white rounded-2xl font-black text-xl hover:scale-110 transition-all shadow-xl shadow-primary/20"
+          >
+            Agendar Consulta
+          </a>
         </div>
       </section>
 
-      {/* Achievements Section */}
-      <section className="py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Minhas Conquistas</h2>
-            <p className="text-lg text-muted-foreground">Resultados que falam por si</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 bg-card border border-border rounded-lg text-center hover:border-primary transition-colors duration-200">
-              <div className="text-5xl font-bold text-primary mb-3">500+</div>
-              <p className="text-lg font-semibold mb-2">Pacientes Transformados</p>
-              <p className="text-muted-foreground">Histórias de sucesso e transformação de vida</p>
-            </div>
-            <div className="p-8 bg-card border border-border rounded-lg text-center hover:border-primary transition-colors duration-200">
-              <div className="text-5xl font-bold text-secondary mb-3">10+</div>
-              <p className="text-lg font-semibold mb-2">Anos de Experiência</p>
-              <p className="text-muted-foreground">Dedicação e conhecimento aprofundado</p>
-            </div>
-            <div className="p-8 bg-card border border-border rounded-lg text-center hover:border-primary transition-colors duration-200">
-              <div className="text-5xl font-bold text-primary mb-3">95%</div>
-              <p className="text-lg font-semibold mb-2">Taxa de Satisfação</p>
-              <p className="text-muted-foreground">Confiança e qualidade no atendimento</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Floating Buttons */}
-      <FloatingButtons />
-
-      {/* Footer */}
       <Footer />
+      <FloatingButtons />
     </div>
   );
 }
