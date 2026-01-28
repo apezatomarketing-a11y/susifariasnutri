@@ -289,7 +289,7 @@
   }
 
   .animate-gallery-slide {
-    animation: gallerySlide 60s linear infinite;
+    animation: gallerySlide 20s linear infinite;
   }
 
   @keyframes gallerySlide {
