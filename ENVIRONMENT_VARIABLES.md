@@ -20,6 +20,10 @@ Copie e cole a tabela abaixo no painel de variáveis de ambiente do Netlify (Sit
 | `RESEND_API_KEY` | `re_3jmawcpY_4b6iGtiQsZVT1Z7Vy6MjrWsJ` | Chave da API Resend (para emails) |
 | `JWT_SECRET` | `sua-chave-secreta-jwt-aqui-min-32-caracteres` | Chave para assinatura de JWT |
 | `NODE_ENV` | `production` | Ambiente de execução |
+| `VITE_APP_ID` | `susifariasnutri` | ID da aplicação |
+| `VITE_OAUTH_PORTAL_URL` | `https://oauth.manus.im` | URL do portal OAuth |
+| `OAUTH_SERVER_URL` | `https://auth.manus.im` | URL do servidor de autenticação |
+| `OWNER_OPEN_ID` | `[SEU_OPEN_ID]` | Seu ID de administrador |
 
 ## 2. Variáveis para Supabase
 
