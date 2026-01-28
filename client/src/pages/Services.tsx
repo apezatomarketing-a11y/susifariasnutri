@@ -1,7 +1,15 @@
 import FloatingButtons from '@/components/FloatingButtons';
 import Footer from '@/components/Footer';
-import { SERVICES, WHATSAPP_MESSAGES, CONTACT_INFO } from '@/lib/constants';
-import { MessageCircle } from 'lucide-react';
+import { SERVICES, CONTACT_INFO } from '@/lib/constants';
+import { MessageCircle, Stethoscope, Package, Activity, Flower2, Pill } from 'lucide-react';
+
+const ICON_MAP: Record<string, React.ReactNode> = {
+  Stethoscope: <Stethoscope size={32} />,
+  Package: <Package size={32} />,
+  Activity: <Activity size={32} />,
+  Flower2: <Flower2 size={32} />,
+  Pill: <Pill size={32} />,
+};
 
 export default function Services() {
   const handleWhatsApp = (message: string) => {
@@ -95,11 +103,11 @@ export default function Services() {
                 key={service.id}
                 className="p-8 bg-card border border-border rounded-lg hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 flex flex-col"
               >
-                <div className="text-4xl mb-4">{service.icon}</div>
+                <div className="text-4xl mb-4 text-primary">{ICON_MAP[service.icon as keyof typeof ICON_MAP]}</div>
                 <h3 className="text-2xl font-bold text-primary mb-3">{service.title}</h3>
                 <p className="text-muted-foreground mb-6 flex-1">{service.description}</p>
                 <button
-                  onClick={() => handleWhatsApp(WHATSAPP_MESSAGES.contact)}
+                  onClick={() => handleWhatsApp((service as any).message)}
                   className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-secondary/10 hover:bg-secondary/20 text-secondary rounded-lg transition-colors duration-200 font-medium"
                 >
                   <MessageCircle size={16} />
@@ -137,7 +145,7 @@ export default function Services() {
                       <p className="text-3xl font-bold text-primary mb-8">{service.price}</p>
                     </div>
                     <button
-                      onClick={() => handleWhatsApp(WHATSAPP_MESSAGES.contact)}
+                      onClick={() => handleWhatsApp((service as any).message)}
                       className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium"
                     >
                       <MessageCircle size={18} />
@@ -159,7 +167,7 @@ export default function Services() {
             Entre em contato comigo para uma consulta inicial gratuita e descubra qual serviço é o melhor para você.
           </p>
           <button
-            onClick={() => handleWhatsApp(WHATSAPP_MESSAGES.contact)}
+            onClick={() => handleWhatsApp('Olá! Gostaria de mais informações sobre seus serviços.')}
             className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium text-lg"
           >
             <MessageCircle size={20} />

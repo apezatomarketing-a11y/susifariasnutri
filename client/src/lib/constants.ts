@@ -29,12 +29,16 @@ export const GOOGLE_MAPS = {
 export const WHATSAPP_MESSAGES = {
   floatingButton: 'Oi, vim do seu site e gostaria de mais informações sobre seus serviços!',
   consultaAvulsa: 'Gostaria de agendar uma consulta avulsa. Pode me informar sobre disponibilidade?',
-  pacotes: 'Tenho interesse em conhecer seus pacotes de nutrição. Qual seria o melhor para mim?',
+  pacote3m: 'Tenho interesse no pacote de 3 meses. Qual seria o melhor para mim?',
+  pacote6m: 'Tenho interesse no pacote de 6 meses. Qual seria o melhor para mim?',
+  pacote12m: 'Tenho interesse no pacote de 12 meses. Qual seria o melhor para mim?',
   bioimpedancia: 'Gostaria de fazer uma avaliação de bioimpedância. Como funciona?',
   mounjaro: 'Tenho interesse em informações sobre o programa Mounjaro. Pode me ajudar?',
   nutritionClinical: 'Tenho interesse em nutrição clínica. Qual seria o melhor tratamento para meu caso?',
   nutritionSports: 'Sou atleta e gostaria de conhecer sobre nutrição esportiva. Pode me ajudar?',
   contact: 'Olá! Entrei em contato através do formulário de contato do seu site.',
+  florais: 'Tenho interesse em conhecer mais sobre os florais de Minas. Pode me ajudar?',
+  suplementacao: 'Gostaria de saber mais sobre suplementação personalizada. Pode me ajudar?',
 } as const;
 
 // Navigation Items
@@ -60,30 +64,35 @@ export const SERVICES = [
     title: 'Consulta Avulsa',
     description: 'Consulta individualizada com análise completa de seu histórico nutricional',
     icon: 'Stethoscope',
+    message: 'Gostaria de agendar uma consulta avulsa. Pode me informar sobre disponibilidade?',
   },
   {
     id: 'pacotes',
     title: 'Pacotes',
     description: 'Programas personalizados com acompanhamento contínuo',
     icon: 'Package',
+    message: 'Tenho interesse em conhecer seus pacotes de nutrição. Qual seria o melhor para mim?',
   },
   {
     id: 'bioimpedancia',
     title: 'Bioimpedância',
     description: 'Avaliação de composição corporal com relatório detalhado',
     icon: 'Activity',
+    message: 'Gostaria de fazer uma avaliação de bioimpedância. Como funciona?',
   },
   {
     id: 'florais',
     title: 'Florais de Minas',
     description: 'Complementação natural para seu tratamento nutricional',
     icon: 'Flower2',
+    message: 'Tenho interesse em conhecer mais sobre os florais de Minas. Pode me ajudar?',
   },
   {
     id: 'suplementacao',
     title: 'Suplementação',
     description: 'Recomendações personalizadas de suplementos nutricionais',
     icon: 'Pill',
+    message: 'Gostaria de saber mais sobre suplementação personalizada. Pode me ajudar?',
   },
 ] as const;
 
