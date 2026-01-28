@@ -94,34 +94,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Banner Section - Com Destaque de Título Principal */}
+      {/* Banner Section - Com Vídeo Lateral para Melhor Distribuição */}
       <section className="py-24 md:py-32 bg-gradient-to-br from-primary/10 via-secondary/5 to-primary/10 border-y border-primary/10">
         <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-          <div className="text-center space-y-8 max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-6xl xl:text-7xl font-black tracking-tighter leading-tight animate-in fade-in slide-in-from-bottom-10 duration-1000">
-              Cuidar da sua saúde é um compromisso com a sua melhor versão.
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-              Cada corpo tem uma história, cada pessoa tem uma rotina, e é por isso que o meu trabalho é totalmente personalizado. Unindo ciência, experiência clínica e um olhar humano, desenvolvo estratégias nutricionais que promovem equilíbrio, desempenho, bem-estar e resultados que você consegue manter ao longo da vida.
-            </p>
-          </div>
-        </div>
-      </section>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Text Content */}
+            <div className="space-y-8 text-center lg:text-left">
+              <h2 className="text-4xl md:text-5xl xl:text-6xl font-black tracking-tighter leading-tight animate-in fade-in slide-in-from-bottom-10 duration-1000">
+                Cuidar da sua saúde é um compromisso com a sua melhor versão.
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                Cada corpo tem uma história, cada pessoa tem uma rotina, e é por isso que o meu trabalho é totalmente personalizado. Unindo ciência, experiência clínica e um olhar humano, desenvolvo estratégias nutricionais que promovem equilíbrio, desempenho, bem-estar e resultados que você consegue manter ao longo da vida.
+              </p>
+            </div>
 
-      {/* Video Section - Único na página */}
-      <section className="py-24 md:py-32 bg-background">
-        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-          <div className="relative group max-w-5xl mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-[3rem] opacity-20 blur-3xl" />
-            <div className="relative aspect-video rounded-[3rem] overflow-hidden border-8 border-card shadow-2xl bg-black">
-              <video
-                controls
-                className="w-full h-full object-contain"
-                poster={FEATURED_IMAGES.home}
-              >
-                <source src="https://evaoqyroqmmlojtzrulj.supabase.co/storage/v1/object/public/videos/video%20inicio.mp4" type="video/mp4" />
-                Seu navegador não suporta a reprodução de vídeos.
-              </video>
+            {/* Video Container */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-[3rem] opacity-20 blur-2xl" />
+              <div className="relative aspect-video rounded-[3rem] overflow-hidden border-8 border-card shadow-2xl bg-black">
+                <video
+                  controls
+                  className="w-full h-full object-contain"
+                  poster={FEATURED_IMAGES.home}
+                >
+                  <source src="https://evaoqyroqmmlojtzrulj.supabase.co/storage/v1/object/public/videos/video%20inicio.mp4" type="video/mp4" />
+                  Seu navegador não suporta a reprodução de vídeos.
+                </video>
+              </div>
             </div>
           </div>
         </div>
