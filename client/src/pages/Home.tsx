@@ -18,8 +18,8 @@ export default function Home() {
         <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-primary/10 rounded-full blur-[120px] animate-pulse-slow" />
         <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-secondary/10 rounded-full blur-[120px] animate-pulse-slow" />
 
-        <div className="container relative z-10 py-12 md:py-0">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="container relative z-10 py-12 md:py-0 px-6 md:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-7xl mx-auto">
             {/* Text Content */}
             <div className="space-y-8 text-center lg:text-left order-2 lg:order-1">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -28,14 +28,20 @@ export default function Home() {
               </div>
               
               <div className="space-y-4">
-                <h1 className="text-5xl md:text-7xl xl:text-8xl font-black tracking-tighter leading-[0.9] animate-in fade-in slide-in-from-left-10 duration-1000">
-                  Sua Saúde em <br />
+                <h1 className="text-4xl md:text-6xl xl:text-7xl font-black tracking-tighter leading-[1.1] animate-in fade-in slide-in-from-left-10 duration-1000">
+                  Transforme sua saúde, seu corpo e sua relação com a <br />
                   <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] bg-clip-text text-transparent animate-gradient-text">
-                    Equilíbrio.
+                    alimentação.
                   </span>
                 </h1>
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0 animate-in fade-in slide-in-from-left-10 duration-1000 delay-200">
-                  Transformando vidas através de estratégias nutricionais personalizadas e baseadas em ciência.
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0 animate-in fade-in slide-in-from-left-10 duration-1000 delay-200">
+                  Nutrição clínica e esportiva com base científica, atendimento humanizado e estratégias personalizadas para resultados reais, seguros e sustentáveis.
+                </p>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0 animate-in fade-in slide-in-from-left-10 duration-1000 delay-300">
+                  Com mais de 20 anos de experiência na área da saúde, ajudo mulheres e homens a recuperarem o equilíbrio metabólico, hormonal e emocional por meio de um acompanhamento nutricional individualizado, respeitando rotina, história e necessidades únicas de cada pessoa.
+                </p>
+                <p className="text-sm md:text-base text-foreground font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0 animate-in fade-in slide-in-from-left-10 duration-1000 delay-400">
+                  Aqui, o foco não é apenas emagrecer — é construir saúde, autoestima e qualidade de vida de forma consciente e duradoura.
                 </p>
               </div>
 
@@ -108,17 +114,51 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Banner Section - Acima do Vídeo */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/5">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="text-center space-y-6 max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-tight">
+              Cuidar da sua saúde é um compromisso com a sua melhor versão.
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              Cada corpo tem uma história, cada pessoa tem uma rotina, e é por isso que o meu trabalho é totalmente personalizado. Unindo ciência, experiência clínica e um olhar humano, desenvolvo estratégias nutricionais que promovem equilíbrio, desempenho, bem-estar e resultados que você consegue manter ao longo da vida.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Video Section - Abaixo do Banner */}
+      <section className="py-16 md:py-24">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="relative group max-w-5xl mx-auto">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-[2rem] opacity-20 blur-xl" />
+            <div className="relative aspect-video rounded-[2rem] overflow-hidden border-4 border-card shadow-2xl bg-black">
+              <video
+                controls
+                className="w-full h-full object-cover"
+                poster={FEATURED_IMAGES.home}
+              >
+                <source src={VIDEOS.home} type="video/mp4" />
+                <source src={VIDEOS.home} type="video/quicktime" />
+                Seu navegador não suporta a reprodução de vídeos.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="container relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="py-16 md:py-24 relative overflow-hidden">
+        <div className="container relative z-10 px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
-              { label: 'Anos de Exp.', val: '10+', icon: Award, color: 'text-primary' },
+              { label: 'Anos de Exp.', val: '20+', icon: Award, color: 'text-primary' },
               { label: 'Pacientes', val: '500+', icon: Users, color: 'text-secondary' },
               { label: 'Satisfação', val: '98%', icon: Star, color: 'text-primary' },
               { label: 'Protocolos', val: '15+', icon: CheckCircle2, color: 'text-secondary' },
             ].map((stat, i) => (
-              <div key={i} className="group p-8 bg-card border border-border rounded-3xl hover-lift text-center">
+              <div key={i} className="group p-6 md:p-8 bg-card border border-border rounded-3xl hover-lift text-center">
                 <stat.icon className={`${stat.color} mx-auto mb-4 group-hover:scale-110 transition-transform`} size={32} />
                 <div className="text-3xl md:text-4xl font-black mb-1">{stat.val}</div>
                 <p className="text-sm font-bold text-muted-foreground uppercase tracking-tighter">{stat.label}</p>
@@ -129,8 +169,8 @@ export default function Home() {
       </section>
 
       {/* Quick Services */}
-      <section className="py-24 bg-muted/30">
-        <div className="container">
+      <section className="py-16 md:py-24 bg-muted/30">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
             <div className="max-w-2xl">
               <h2 className="text-4xl md:text-6xl font-black mb-4 tracking-tighter">Especialidades</h2>
@@ -142,13 +182,13 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {[
               { title: 'Clínica', desc: 'Tratamento de patologias e reeducação alimentar.', icon: '🏥' },
               { title: 'Esportiva', desc: 'Performance, hipertrofia e emagrecimento.', icon: '⚡' },
               { title: 'Mounjaro', desc: 'Acompanhamento especializado em protocolos injetáveis.', icon: '💉' },
             ].map((s, i) => (
-              <div key={i} className="p-10 bg-card border border-border rounded-[2.5rem] hover-glow group">
+              <div key={i} className="p-8 md:p-10 bg-card border border-border rounded-[2.5rem] hover-glow group">
                 <div className="text-5xl mb-8 group-hover:scale-110 transition-transform inline-block">{s.icon}</div>
                 <h3 className="text-2xl font-black mb-4">{s.title}</h3>
                 <p className="text-muted-foreground font-medium leading-relaxed">{s.desc}</p>
@@ -159,9 +199,9 @@ export default function Home() {
       </section>
 
       {/* Location */}
-      <section className="py-24">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="py-16 md:py-24">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-8">
               <h2 className="text-4xl md:text-6xl font-black tracking-tighter">Onde Estamos</h2>
               <div className="space-y-6">
@@ -198,7 +238,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 container">
+      <section className="py-16 md:py-24 container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
         <div className="relative p-12 md:p-24 bg-primary rounded-[4rem] overflow-hidden text-center text-white">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.1),transparent)]" />
           <div className="relative z-10 space-y-8 max-w-3xl mx-auto">

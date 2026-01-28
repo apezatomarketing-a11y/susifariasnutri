@@ -131,7 +131,7 @@ export const FEATURED_IMAGES = {
 
 // Videos
 export const VIDEOS = {
-  home: 'https://evaoqyroqmmlojtzrulj.supabase.co/storage/v1/object/public/videos/video%20inicio.MOV',
+  home: 'https://evaoqyroqmmlojtzrulj.supabase.co/storage/v1/object/public/videos/video%20inicio.mp4',
   mounjaro: 'https://evaoqyroqmmlojtzrulj.supabase.co/storage/v1/object/public/videos/video_mounjaro.mp4',
 } as const;
 
