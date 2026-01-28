@@ -4,11 +4,11 @@ type Theme = "light" | "dark";
 
 interface ThemeContextType {
   theme: Theme;
-  toggleTheme?: () => void;
+  toggleTheme: () => void;
   switchable: boolean;
 }
 
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+export const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 interface ThemeProviderProps {
   children: React.ReactNode;
@@ -18,8 +18,8 @@ interface ThemeProviderProps {
 
 export function ThemeProvider({
   children,
-  defaultTheme = "light",
-  switchable = false,
+  defaultTheme = "dark",
+  switchable = true,
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(() => {
     if (switchable) {
@@ -42,11 +42,11 @@ export function ThemeProvider({
     }
   }, [theme, switchable]);
 
-  const toggleTheme = switchable
-    ? () => {
-        setTheme(prev => (prev === "light" ? "dark" : "light"));
-      }
-    : undefined;
+  const toggleTheme = () => {
+    if (switchable) {
+      setTheme(prev => (prev === "light" ? "dark" : "light"));
+    }
+  };
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme, switchable }}>
