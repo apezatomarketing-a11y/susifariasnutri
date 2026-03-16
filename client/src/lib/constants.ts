@@ -3,8 +3,8 @@ export const CONTACT_INFO = {
   whatsapp: '5512991363030',
   phone: '(12) 99136-3030',
   email: 'susileoni@yahoo.com.br',
-  address: 'R. Itambé, 661 - Jardim Satélite, São José dos Campos - SP, 12230-660',
-  addressShort: 'Rua Itambé, 661 - Jardim Satélite',
+  address: 'Rua Havana, 34 - Bairro Vila Rubi, São José dos Campos - SP',
+  addressShort: 'Rua Havana, 34 - Vila Rubi',
   city: 'São José dos Campos',
   state: 'SP',
 } as const;
@@ -20,9 +20,9 @@ export const SOCIAL_MEDIA = {
 
 // Google Maps
 export const GOOGLE_MAPS = {
-  embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.8197467280556!2d-45.89019!3d-23.20369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4b2b2b2b2b2b%3A0x2b2b2b2b2b2b2b2b!2sR.%20Itamb%C3%A9%2C%20661%20-%20Jardim%20Sat%C3%A9lite%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890',
-  mapsLink: 'https://maps.app.goo.gl/fNSc5z9hyMGABQcw8',
-  shareLink: 'https://share.google/cQ8qS6UOupk7yHAQP',
+  embedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.8197467280556!2d-45.89019!3d-23.20369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4b2b2b2b2b2b%3A0x2b2b2b2b2b2b2b2b!2sRua%20Havana%2C%2034%20-%20Vila%20Rubi%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890',
+  mapsLink: 'https://maps.app.goo.gl/rua-havana-34-vila-rubi',
+  shareLink: 'https://share.google/rua-havana-34-vila-rubi',
 } as const;
 
 // WhatsApp Messages

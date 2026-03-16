@@ -107,6 +107,36 @@ export default function Mounjaro() {
         </div>
       </section>
 
+      {/* Qual o papel da nutricionista Section */}
+      <section className="py-24 md:py-32 bg-muted/10">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter">Qual o papel da nutricionista durante o uso de Mounjaro</h2>
+            <p className="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">
+              Durante o tratamento com Mounjaro (tirzepatida), o acompanhamento com uma nutricionista especializada eh fundamental para garantir seguranca, equilibrio e melhores resultados. A nutricao profissional atua de forma individualizada, ajustando a alimentacao de acordo com os objetivos do paciente, exames laboratoriais, historico de saude e necessidades metabolicas especificas. Alem disso, a orientacao nutricional adequada considera possiveis mudancas no apetite e na digestao que podem ocorrer ao longo do tratamento, ajudando o paciente a manter uma alimentacao equilibrada, segura e sustentavel.
+            </p>
+            <p className="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">
+              Mais do que focar apenas em resultados imediatos, o acompanhamento nutricional contribui para a construcao de habitos alimentares saudaveis a longo prazo, promovendo saude, bem-estar e qualidade de vida. Esse trabalho nao substitui o acompanhamento medico, mas atua de forma integrada, garantindo que a alimentacao esteja alinhada ao tratamento, respeitando o corpo e os objetivos individuais de cada pessoa.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* O que considerar no plano alimentar Section */}
+      <section className="py-24 md:py-32 bg-background">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter">O que considerar no plano alimentar com Mounjaro</h2>
+            <p className="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">
+              A alimentacao tem um papel essencial no suporte aos resultados durante o uso de Mounjaro. Um plano alimentar bem estruturado busca o equilibrio entre macronutrientes (como proteinas, carboidratos e gorduras boas) para preservar energia, massa muscular e o funcionamento adequado do organismo. A inclusao de fibras e alimentos que favorecem a saciedade tambem eh importante, ajudando no controle do apetite e na manutencao de habitos alimentares mais consistentes.
+            </p>
+            <p className="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">
+              Alem disso, o plano alimentar pode passar por ajustes conforme a tolerancia gastrointestinal, especialmente nas fases iniciais do tratamento, quando algumas pessoas relatam mudancas no apetite ou leve desconforto digestivo. A hidratacao adequada e escolhas alimentares que promovem bem-estar completam essa estrategia nutricional. Quando planejada por uma profissional qualificada, a alimentacao permite que o paciente trabalhe em harmonia com o proprio corpo, promovendo saude de forma consciente, segura e sustentavel.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Safety Section */}
       <section className="py-24 md:py-32 bg-destructive/5">
         <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
@@ -133,6 +163,44 @@ export default function Mounjaro() {
                   ))}
                 </ul>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Perguntas Frequentes Section */}
+      <section className="py-24 md:py-32 bg-muted/10">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-12">Perguntas frequentes sobre Mounjaro e nutricao</h2>
+            <div className="space-y-6">
+              <details className="group p-8 bg-card border border-border rounded-2xl hover-lift cursor-pointer">
+                <summary className="flex items-center justify-between font-bold text-lg md:text-xl text-foreground">
+                  <span>🔹 Mounjaro ajuda a perder peso?</span>
+                  <span className="group-open:rotate-180 transition-transform">+</span>
+                </summary>
+                <p className="mt-4 text-lg text-muted-foreground font-medium leading-relaxed">
+                  Estudos clinicos mostram que Mounjaro pode contribuir para perda de peso quando usado com dieta equilibrada e atividade fisica, mas cada caso eh unico e depende de fatores metabolicos e clinicos.
+                </p>
+              </details>
+              <details className="group p-8 bg-card border border-border rounded-2xl hover-lift cursor-pointer">
+                <summary className="flex items-center justify-between font-bold text-lg md:text-xl text-foreground">
+                  <span>🔹 Posso seguir minha alimentacao normal?</span>
+                  <span className="group-open:rotate-180 transition-transform">+</span>
+                </summary>
+                <p className="mt-4 text-lg text-muted-foreground font-medium leading-relaxed">
+                  A orientacao nutricional personalizada ajuda a adaptar a alimentacao ao seu plano de tratamento, para seguranca e melhores resultados.
+                </p>
+              </details>
+              <details className="group p-8 bg-card border border-border rounded-2xl hover-lift cursor-pointer">
+                <summary className="flex items-center justify-between font-bold text-lg md:text-xl text-foreground">
+                  <span>🔹 Quais cuidados devo ter?</span>
+                  <span className="group-open:rotate-180 transition-transform">+</span>
+                </summary>
+                <p className="mt-4 text-lg text-muted-foreground font-medium leading-relaxed">
+                  Sempre siga prescricao medica e mantenha comunicacao regular com sua nutricionista para ajustes conforme sua resposta ao tratamento.
+                </p>
+              </details>
             </div>
           </div>
         </div>

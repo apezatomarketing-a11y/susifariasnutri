@@ -61,8 +61,20 @@ export default function NutritionClinical() {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-medium leading-relaxed">
-            Tratamento nutricional baseado em evidências para o controle e prevenção de patologias com foco em resultados reais.
+            Acompanhamento de nutrição clínica personalizada, baseado em evidências para o controle e prevenção de patologias como diabetes, pressão alta, sobrepeso, obesidade, colesterol alto, doenças cardiovasculares, renais, hepáticas e inflamatórias, além de com foco em resultados reais.
           </p>
+        </div>
+      </section>
+
+      {/* O que é Nutrição Clínica Section */}
+      <section className="py-24 md:py-32 bg-muted/10">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter">Nutrição Clínica Especializada para Resultados Reais</h2>
+            <p className="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">
+              A nutrição clínica é uma abordagem focada em cuidar da sua saúde através da alimentação personalizada. Com acompanhamento profissional, você recebe planos alimentares clínicos adaptados à sua rotina e condição de saúde, com foco em objetivos como emagrecimento saudável, equilíbrio metabólico, melhora digestiva e suporte nutricional para condições específicas.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -101,18 +113,114 @@ export default function NutritionClinical() {
         </div>
       </section>
 
+      {/* Para quem é esse serviço Section */}
+      <section className="py-24 md:py-32 bg-muted/10">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-12">Para quem é esse serviço</h2>
+            <p className="text-lg md:text-xl text-muted-foreground font-medium mb-8 leading-relaxed">
+              Esse serviço de nutrição clínica é ideal para você que:
+            </p>
+            <div className="space-y-6">
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0">✓</div>
+                <p className="text-lg font-medium text-foreground">Quer um plano alimentar personalizado com base em exames e necessidades específicas</p>
+              </div>
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0">✓</div>
+                <p className="text-lg font-medium text-foreground">Precisa de acompanhamento profissional para controle de peso com saúde</p>
+              </div>
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0">✓</div>
+                <p className="text-lg font-medium text-foreground">Busca suporte para condições crônicas (ex.: diabetes, hipertensão)</p>
+              </div>
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0">✓</div>
+                <p className="text-lg font-medium text-foreground">Tem dificuldades com alimentação e quer mudança sustentável de hábitos</p>
+              </div>
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0">✓</div>
+                <p className="text-lg font-medium text-foreground">Necessita de orientação nutricional individualizada e contínua</p>
+              </div>
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0">✓</div>
+                <p className="text-lg font-medium text-foreground">Precisa de uma consulta com nutricionista em São José dos Campos, Jacareí e região</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sobre o Atendimento Clínico Section */}
+      <section className="py-24 md:py-32 bg-background">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter">Sobre o Atendimento Clínico</h2>
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">Como funciona a Consulta de Nutrição Clínica comigo</h3>
+                <p className="text-lg text-muted-foreground font-medium mb-6 leading-relaxed">
+                  A consulta nutricional clínica inclui:
+                </p>
+                <ul className="space-y-4">
+                  <li className="flex gap-4 items-start">
+                    <div className="text-2xl flex-shrink-0 text-primary">•</div>
+                    <p className="text-lg font-medium text-foreground">Entrevista detalhada sobre sua saúde, estilo de vida e histórico alimentar</p>
+                  </li>
+                  <li className="flex gap-4 items-start">
+                    <div className="text-2xl flex-shrink-0 text-primary">•</div>
+                    <p className="text-lg font-medium text-foreground">Avaliação de exames e sinais clínicos (quando aplicável)</p>
+                  </li>
+                  <li className="flex gap-4 items-start">
+                    <div className="text-2xl flex-shrink-0 text-primary">•</div>
+                    <p className="text-lg font-medium text-foreground">Estruturação de plano alimentar clínico personalizado</p>
+                  </li>
+                  <li className="flex gap-4 items-start">
+                    <div className="text-2xl flex-shrink-0 text-primary">•</div>
+                    <p className="text-lg font-medium text-foreground">Acompanhamento regular para ajustes e monitoramento da evolução</p>
+                  </li>
+                </ul>
+              </div>
+              <div className="p-8 md:p-10 bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-3xl">
+                <p className="text-lg md:text-xl text-foreground font-medium leading-relaxed">
+                  Esse acompanhamento nutricional clínico garante que cada etapa do seu plano seja feita com cuidado profissional, gerando resultados reais e contínuos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* IMC Calculator Section */}
+      <section className="py-24 md:py-32 bg-muted/10">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-8 text-center">Calcule seu IMC</h2>
+            <div className="p-8 md:p-12 bg-card border border-border rounded-3xl shadow-lg">
+              <iframe
+                src="https://www.programasaudefacil.com.br/calculadora-de-imc"
+                width="100%"
+                height="600"
+                style={{ border: 'none', borderRadius: '1.5rem' }}
+                title="Calculadora de IMC"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 md:py-32 container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
         <div className="relative p-16 md:p-32 bg-primary rounded-[5rem] overflow-hidden text-center text-white shadow-2xl">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.1),transparent)]" />
           <div className="relative z-10 space-y-10 max-w-4xl mx-auto">
             <h2 className="text-5xl md:text-8xl font-black tracking-tighter leading-none">Sua saúde não pode esperar.</h2>
-            <p className="text-xl md:text-2xl text-primary-foreground/80 font-medium leading-relaxed">Agende uma consulta clínica e inicie seu protocolo de tratamento personalizado hoje mesmo.</p>
+            <p className="text-xl md:text-2xl text-primary-foreground/80 font-medium leading-relaxed">Pronto para transformar sua saúde com um plano alimentar clínico exclusivo?</p>
             <button
               onClick={() => handleWhatsApp(WHATSAPP_MESSAGES.nutritionClinical)}
               className="px-16 py-8 bg-white text-primary rounded-3xl font-black text-2xl hover:scale-110 transition-all shadow-2xl active:scale-95"
             >
-              Agendar Agora
+              Agende sua consulta com a nutricionista clínica Susi agora
             </button>
           </div>
         </div>

@@ -44,7 +44,7 @@ export default function AboutMe() {
                   Prazer, eu sou Susi Farias, nutricionista com mais de <span className="text-foreground font-bold">duas décadas de atuação na área da saúde</span>, especialista em Nutrição Clínica, Nutrição Esportiva, Obesidade e Emagrecimento.
                 </p>
                 <p className="animate-in fade-in slide-in-from-right-10 duration-700 delay-200">
-                  Além da formação em Nutrição, também sou enfermeira e técnica de enfermagem, o que amplia meu olhar clínico e fortalece meu compromisso com um cuidado integral, seguro e responsável.
+                  Além da formação em Nutrição, também sou técnica de enfermagem, o que amplia meu olhar clínico e fortalece meu compromisso com um cuidado integral, seguro e responsável.
                 </p>
                 <p className="animate-in fade-in slide-in-from-right-10 duration-700 delay-300">
                   Minha missão é ajudar mulheres a recuperarem a saúde metabólica, hormonal e emocional, promovendo emagrecimento consciente, melhora da autoestima e qualidade de vida. Acredito que saúde vai muito além da balança — envolve equilíbrio físico, mental e emocional.

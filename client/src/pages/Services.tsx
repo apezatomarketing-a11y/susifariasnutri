@@ -35,33 +35,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Report Section - High Visibility */}
-      <section className="py-12 -mt-16 relative z-20">
-        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-          <div className="max-w-5xl mx-auto p-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-[4rem] shadow-2xl animate-gradient-text">
-            <div className="bg-card rounded-[3.9rem] p-10 md:p-16 flex flex-col md:flex-row items-center gap-12">
-              <div className="p-8 bg-primary/10 rounded-[3rem] text-primary">
-                <FileText size={80} />
-              </div>
-              <div className="flex-1 text-center md:text-left space-y-6">
-                <h2 className="text-4xl md:text-5xl font-black tracking-tighter leading-tight">Relatório de Metodologia</h2>
-                <p className="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">
-                  Baixe nosso guia completo sobre como funciona o acompanhamento nutricional e o que esperar da sua jornada de transformação.
-                </p>
-                <a
-                  href={DOCUMENTS.relatorioServicos}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-4 px-10 py-5 bg-primary text-white rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-xl shadow-primary/20"
-                >
-                  Ver PDF Completo
-                  <ArrowRight size={24} />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Services Grid */}
       <section className="py-24 md:py-32 bg-background">
@@ -86,6 +60,34 @@ export default function Services() {
                 </button>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Report Section - Below Services */}
+      <section className="py-24 md:py-32 bg-muted/20">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="max-w-5xl mx-auto p-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-[4rem] shadow-2xl animate-gradient-text">
+            <div className="bg-card rounded-[3.9rem] p-10 md:p-16 flex flex-col md:flex-row items-center gap-12">
+              <div className="p-8 bg-primary/10 rounded-[3rem] text-primary">
+                <FileText size={80} />
+              </div>
+              <div className="flex-1 text-center md:text-left space-y-6">
+                <h2 className="text-4xl md:text-5xl font-black tracking-tighter leading-tight">Relatório de Metodologia</h2>
+                <p className="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">
+                  Veja como funciona o acompanhamento nutricional e o que esperar da sua jornada de transformação.
+                </p>
+                <a
+                  href={DOCUMENTS.relatorioServicos}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-4 px-10 py-5 bg-primary text-white rounded-2xl font-black text-lg hover:scale-105 transition-all shadow-xl shadow-primary/20"
+                >
+                  Ver PDF Completo
+                  <ArrowRight size={24} />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

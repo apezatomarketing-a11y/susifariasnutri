@@ -61,8 +61,67 @@ export default function NutritionSports() {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-medium leading-relaxed">
-            Leve seu desempenho ao próximo nível com estratégias de nutrição de elite desenhadas para atletas e entusiastas.
+            Acompanhamento com nutricionista esportivo para performance e resultados. Leve seu desempenho ao próximo nível com estratégias de nutrição de elite desenhadas para atletas e entusiastas!
           </p>
+        </div>
+      </section>
+
+      {/* O que é Nutrição Esportiva Section */}
+      <section className="py-24 md:py-32 bg-muted/10">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter">O que é Nutrição Esportiva</h2>
+            <div className="space-y-6">
+              <p className="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">
+                <span className="text-foreground font-bold">Nutrição esportiva personalizada para atletas e praticantes de atividade física</span>
+              </p>
+              <p className="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">
+                A nutrição esportiva é uma área especializada da nutrição que combina alimentação, ciência dos nutrientes e fisiologia do exercício para otimizar seu desempenho físico, acelerar a recuperação muscular, melhorar sua composição corporal, reduzir o risco de lesões e promover saúde e bem-estar no longo prazo.
+              </p>
+              <p className="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">
+                Essa abordagem é indicada tanto para quem treina para competição quanto para quem quer resultados melhores na academia, corrida, ciclismo, musculação ou treino funcional.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Para quem é esse serviço Section */}
+      <section className="py-24 md:py-32 bg-background">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-12">Para quem é esse serviço</h2>
+            <p className="text-lg md:text-xl text-muted-foreground font-medium mb-8 leading-relaxed">
+              Esse serviço de Nutrição Esportiva é ideal para você que:
+            </p>
+            <div className="space-y-6 mb-12">
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0">✓</div>
+                <p className="text-lg font-medium text-foreground">Quer melhorar rendimento nos treinos e em provas</p>
+              </div>
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0">✓</div>
+                <p className="text-lg font-medium text-foreground">Busca ganho de massa magra ou perda de gordura com suporte profissional</p>
+              </div>
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0">✓</div>
+                <p className="text-lg font-medium text-foreground">Quer recuperar-se mais rápido entre treinos</p>
+              </div>
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0">✓</div>
+                <p className="text-lg font-medium text-foreground">Precisa de um plano alimentar esportivo individualizado</p>
+              </div>
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0">✓</div>
+                <p className="text-lg font-medium text-foreground">Treina para objetivos específicos (corrida, futebol, crossfit, natação, etc.)</p>
+              </div>
+            </div>
+            <div className="p-8 md:p-10 bg-gradient-to-br from-secondary/10 to-primary/10 border border-secondary/20 rounded-3xl">
+              <p className="text-lg md:text-xl text-foreground font-medium leading-relaxed">
+                <span className="font-bold">Nota:</span> o acompanhamento com um nutricionista esportivo vai além de planos genéricos. Ele é adaptado ao seu treino, objetivos e necessidades metabólicas.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -97,6 +156,87 @@ export default function NutritionSports() {
                 </button>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Como funciona o acompanhamento Section */}
+      <section className="py-24 md:py-32 bg-muted/10">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter">Como funciona o acompanhamento</h2>
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">Consulta de Nutrição Esportiva com a Susi</h3>
+                <p className="text-lg text-muted-foreground font-medium mb-6 leading-relaxed">
+                  Durante o atendimento, eu realizo:
+                </p>
+                <ul className="space-y-4">
+                  <li className="flex gap-4 items-start">
+                    <div className="text-2xl flex-shrink-0 text-secondary">•</div>
+                    <p className="text-lg font-medium text-foreground">Avaliação detalhada da sua rotina, treinos e objetivos</p>
+                  </li>
+                  <li className="flex gap-4 items-start">
+                    <div className="text-2xl flex-shrink-0 text-secondary">•</div>
+                    <p className="text-lg font-medium text-foreground">Análise de composição corporal e histórico alimentar</p>
+                  </li>
+                  <li className="flex gap-4 items-start">
+                    <div className="text-2xl flex-shrink-0 text-secondary">•</div>
+                    <p className="text-lg font-medium text-foreground">Estruturação de um plano alimentar esportivo personalizado</p>
+                  </li>
+                  <li className="flex gap-4 items-start">
+                    <div className="text-2xl flex-shrink-0 text-secondary">•</div>
+                    <p className="text-lg font-medium text-foreground">Estratégias nutricionais para pré-treino, intra-treino e pós-treino</p>
+                  </li>
+                  <li className="flex gap-4 items-start">
+                    <div className="text-2xl flex-shrink-0 text-secondary">•</div>
+                    <p className="text-lg font-medium text-foreground">Acompanhamento contínuo para ajustes conforme sua evolução</p>
+                  </li>
+                </ul>
+              </div>
+              <div className="p-8 md:p-10 bg-gradient-to-br from-secondary/10 to-primary/10 border border-secondary/20 rounded-3xl">
+                <p className="text-lg md:text-xl text-foreground font-medium leading-relaxed">
+                  O foco é que você tenha suporte nutricional completo para melhorar performance, recuperação e resultados de forma saudável e sustentável.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Beneficios da Nutrição Esportiva Section */}
+      <section className="py-24 md:py-32 bg-background">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter">Benefícios da Nutrição Esportiva</h2>
+            <h3 className="text-2xl md:text-3xl font-bold">O que a Nutrição Esportiva pode fazer por você</h3>
+            <div className="space-y-6">
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0 text-secondary">✓</div>
+                <p className="text-lg font-medium text-foreground">Aumentar a energia e a resistência física durante os treinos</p>
+              </div>
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0 text-secondary">✓</div>
+                <p className="text-lg font-medium text-foreground">Melhorar a recuperação muscular e reduzir dores pós-treino</p>
+              </div>
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0 text-secondary">✓</div>
+                <p className="text-lg font-medium text-foreground">Auxiliar no controle de peso e na composição corporal</p>
+              </div>
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0 text-secondary">✓</div>
+                <p className="text-lg font-medium text-foreground">Fortalecer o sistema imunológico e reduzir o risco de lesões</p>
+              </div>
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0 text-secondary">✓</div>
+                <p className="text-lg font-medium text-foreground">Apoiar objetivos específicos como hipertrofia, emagrecimento ou performance em provas</p>
+              </div>
+            </div>
+            <div className="p-8 md:p-10 bg-gradient-to-br from-secondary/10 to-primary/10 border border-secondary/20 rounded-3xl">
+              <p className="text-lg md:text-xl text-foreground font-medium leading-relaxed">
+                A nutrição esportiva é mais do que ingestão de alimentos, ela é uma estratégia personalizada que apoia a sua evolução física com base em ciência e prática profissional.
+              </p>
+            </div>
           </div>
         </div>
       </section>

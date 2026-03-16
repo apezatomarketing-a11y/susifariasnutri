@@ -108,6 +108,60 @@ export default function Home() {
               </p>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* New Section - Esse acompanhamento é para você que */}
+      <section className="py-24 md:py-32 bg-background">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 text-center">Esse acompanhamento é para você que:</h2>
+            <div className="space-y-6 text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0">✓</div>
+                <p>Já tentou várias dietas e sempre acaba desistindo</p>
+              </div>
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0">✓</div>
+                <p>Quer emagrecer sem passar fome ou cortar tudo o que gosta</p>
+              </div>
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0">✓</div>
+                <p>Tem uma rotina corrida e precisa de um plano alimentar possível de seguir</p>
+              </div>
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0">✓</div>
+                <p>Quer melhorar saúde, autoestima e relação com a comida</p>
+              </div>
+              <div className="flex gap-4 items-start p-6 bg-card border border-border rounded-2xl hover-lift">
+                <div className="text-3xl flex-shrink-0">✓</div>
+                <p>Busca um acompanhamento próximo e humano, não genérico</p>
+              </div>
+            </div>
+            <div className="mt-12 p-8 md:p-12 bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20 rounded-3xl text-center">
+              <p className="text-lg md:text-xl text-foreground font-bold leading-relaxed">
+                💬 Aqui, você não recebe uma dieta pronta. Você recebe um plano que funciona na sua vida real.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Banner Section - Com Vídeo Lateral para Melhor Distribuição */}
+      <section className="py-24 md:py-32 bg-gradient-to-br from-primary/10 via-secondary/5 to-primary/10 border-y border-primary/10">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Text Content */}
+            <div className="space-y-8 text-center lg:text-left">
+              <h2 className="text-4xl md:text-5xl xl:text-6xl font-black tracking-tighter leading-tight animate-in fade-in slide-in-from-bottom-10 duration-1000">
+                Cuidar da sua saúde é um compromisso com a sua melhor versão.
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                Cada corpo tem uma história, cada pessoa tem uma rotina, e é por isso que o meu trabalho é totalmente personalizado. Unindo ciência, experiência clínica e um olhar humano, desenvolvo estratégias nutricionais que promovem equilíbrio, desempenho, bem-estar e resultados que você consegue manter ao longo da vida.
+              </p>
+            </div>
+
             {/* Video Container */}
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-[3rem] opacity-20 blur-2xl" />
@@ -133,7 +187,7 @@ export default function Home() {
             {[
               { label: 'Anos de Exp.', val: '20+', icon: Award, color: 'text-primary' },
               { label: 'Pacientes', val: '500+', icon: Users, color: 'text-secondary' },
-              { label: 'Satisfação', val: '98%', icon: Star, color: 'text-primary' },
+              { label: 'Satisfação', val: '100%', icon: Star, color: 'text-primary' },
               { label: 'Protocolos', val: '15+', icon: CheckCircle2, color: 'text-secondary' },
             ].map((stat, i) => (
               <div key={i} className="group p-8 md:p-10 bg-card border border-border rounded-[2.5rem] hover-lift text-center shadow-sm">
@@ -172,6 +226,20 @@ export default function Home() {
                 <p className="text-muted-foreground font-medium leading-relaxed text-lg">{s.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Complementary Footer Text - SEO */}
+      <section className="py-16 md:py-24 bg-muted/10">
+        <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto space-y-6 text-center text-muted-foreground font-medium leading-relaxed">
+            <p className="text-base md:text-lg">
+              Susi Farias eh nutricionista especializada em acompanhamento nutricional personalizado, emagrecimento saudavel, nutricao esportiva e reeducacao alimentar. Atende pacientes que buscam resultados reais, com planos alimentares adaptados a rotina e as necessidades individuais.
+            </p>
+            <p className="text-base md:text-lg">
+              Se voce procura uma nutricionista em Sao Jose dos Campos, Jacarei e regiao, com atendimento humanizado e foco em saude e bem-estar, agende sua consulta.
+            </p>
           </div>
         </div>
       </section>
