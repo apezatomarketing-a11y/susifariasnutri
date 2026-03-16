@@ -1,4 +1,6 @@
-const GALLERY_BUCKET_URL = "https://evaoqyroqmmlojtzrulj.supabase.co/storage/v1/object/public/gallery/";
+import { getSupabaseMediaUrl } from '@/lib/supabase-media';
+
+const GALLERY_BUCKET = 'gallery';
 
 // 37 fotos identificadas no bucket gallery
 const GALLERY_FILES = [
@@ -42,7 +44,14 @@ const GALLERY_FILES = [
   "foto galeria slide rotativo animado sobre mim (37).jpeg"
 ];
 
+import { useState } from 'react';
+
 export default function Gallery() {
+  const [imageErrors, setImageErrors] = useState<Set<string>>(new Set());
+
+  const handleImageError = (fileName: string) => {
+    setImageErrors(prev => new Set([...prev, fileName]));
+  };
   // Duplicate images for seamless loop
   const duplicatedImages = [...GALLERY_FILES, ...GALLERY_FILES];
 
@@ -61,12 +70,20 @@ export default function Gallery() {
                 key={`${fileName}-${index}`}
                 className="flex-shrink-0 w-64 h-80 md:w-80 md:h-[450px] rounded-[2.5rem] overflow-hidden border-4 border-card shadow-2xl transition-all duration-500 hover:scale-105 hover:-rotate-2"
               >
-                <img
-                  src={`${GALLERY_BUCKET_URL}${encodeURIComponent(fileName)}`}
-                  alt={`Susi Farias Galeria ${index}`}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
+                {!imageErrors.has(fileName) ? (
+                  <img
+                    src={getSupabaseMediaUrl(GALLERY_BUCKET, fileName)}
+                    alt={`Susi Farias Galeria ${index}`}
+                    className="w-full h-full object-cover transition-transform duration-500"
+                    loading="lazy"
+                    crossOrigin="anonymous"
+                    onError={() => handleImageError(fileName)}
+                  />
+                ) : (
+                  <div className="w-full h-full bg-muted flex items-center justify-center">
+                    <p className="text-muted-foreground text-sm">Imagem indisponível</p>
+                  </div>
+                )}
               </div>
             ))}
           </div>

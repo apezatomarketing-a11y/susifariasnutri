@@ -1,6 +1,7 @@
-import { GOOGLE_MAPS, FEATURED_IMAGES, CONTACT_INFO, WHATSAPP_MESSAGES, VIDEOS } from '@/lib/constants';
 import FloatingButtons from '@/components/FloatingButtons';
 import Footer from '@/components/Footer';
+import Gallery from '@/components/Gallery';
+import { CONTACT_INFO, WHATSAPP_MESSAGES, FEATURED_IMAGES, VIDEOS, GOOGLE_MAPS } from '@/lib/constants';
 import { MapPin, MessageCircle, Star, Users, Award, CheckCircle2 } from 'lucide-react';
 
 export default function Home() {
@@ -170,8 +171,9 @@ export default function Home() {
                   controls
                   className="w-full h-full object-contain"
                   poster={FEATURED_IMAGES.home}
+                  crossOrigin="anonymous"
                 >
-                  <source src="https://evaoqyroqmmlojtzrulj.supabase.co/storage/v1/object/public/videos/video%20inicio.mp4" type="video/mp4" />
+                  <source src={VIDEOS.home} type="video/mp4" />
                   Seu navegador não suporta a reprodução de vídeos.
                 </video>
               </div>

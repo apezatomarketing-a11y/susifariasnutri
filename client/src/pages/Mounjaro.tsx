@@ -1,6 +1,6 @@
 import FloatingButtons from '@/components/FloatingButtons';
 import Footer from '@/components/Footer';
-import { WHATSAPP_MESSAGES, CONTACT_INFO, FEATURED_IMAGES } from '@/lib/constants';
+import { WHATSAPP_MESSAGES, CONTACT_INFO, FEATURED_IMAGES, VIDEOS } from '@/lib/constants';
 import { MessageCircle, CheckCircle, ShieldAlert, Sparkles } from 'lucide-react';
 
 export default function Mounjaro() {
@@ -52,8 +52,9 @@ export default function Mounjaro() {
                   controls
                   className="w-full h-full object-contain"
                   poster={FEATURED_IMAGES.home}
+                  crossOrigin="anonymous"
                 >
-                  <source src="/assets/videos/mounjaro_local.mp4" type="video/mp4" />
+                  <source src={VIDEOS.mounjaro} type="video/mp4" />
                   Seu navegador não suporta reprodução de vídeo.
                 </video>
               </div>
