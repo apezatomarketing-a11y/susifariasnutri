@@ -1,5 +1,6 @@
 import FloatingButtons from '@/components/FloatingButtons';
 import Footer from '@/components/Footer';
+import IMCCalculator from '@/components/IMCCalculator';
 import { WHATSAPP_MESSAGES, CONTACT_INFO } from '@/lib/constants';
 import { MessageCircle, Activity, Heart, Thermometer, User, Flower2, Zap } from 'lucide-react';
 
@@ -194,18 +195,7 @@ export default function NutritionClinical() {
       {/* IMC Calculator Section */}
       <section className="py-24 md:py-32 bg-muted/10">
         <div className="container px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-8 text-center">Calcule seu IMC</h2>
-            <div className="p-8 md:p-12 bg-card border border-border rounded-3xl shadow-lg">
-              <iframe
-                src="https://www.programasaudefacil.com.br/calculadora-de-imc"
-                width="100%"
-                height="600"
-                style={{ border: 'none', borderRadius: '1.5rem' }}
-                title="Calculadora de IMC"
-              />
-            </div>
-          </div>
+          <IMCCalculator />
         </div>
       </section>
 
